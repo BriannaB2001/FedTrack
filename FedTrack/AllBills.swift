@@ -7,16 +7,7 @@
 
 import Foundation
 
-struct AllBills: Codable {
-    var results: [Bills]
-}
-
-struct Bills: Codable {
-    var bills: [Bill]
-}
-
 struct Bill: Codable {
-    
     var number: String
     var shortTitle: String
     var summary: String
@@ -32,4 +23,12 @@ struct Bill: Codable {
         case lastVote = "last_vote"
         case sponsorName = "sponsor_name"
     }
+}
+
+struct AllBills: Codable {
+    var results: [Bills]
+}
+
+struct Bills: Codable {
+    var bills: [Bill]
 }
