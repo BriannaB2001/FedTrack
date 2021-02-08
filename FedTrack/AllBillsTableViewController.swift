@@ -9,36 +9,36 @@ import UIKit
 
 class AllBillsTableViewController: UITableViewController {
     
-    @IBOutlet weak var billNumberLabel: UILabel!
-    @IBOutlet weak var billNameLabel: UILabel!
-    @IBOutlet weak var billTypeLabel: UILabel!
-    
-    var allBills = [Bill]()
+    var allBills = [Bills]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AllBillsURLController.fetchBillsItems { (bills) in
+            DispatchQueue.main.async {
+                self.allBills = bills ?? []
+                self.tableView.reloadData()
+            }
+        }
     }
-    
-    func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
 
-        let allBill = allBills[indexPath.row]
-
-        billNumberLabel?.text = "\(allBill.number)"
-        billNameLabel?.text = "\(allBill.shortTitle)"
-        billTypeLabel?.text = "\(allBill.primarySubject)"
-    }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allBills.count
+        if allBills.count > 0 {
+            return allBills.first!.bills.count
+        } else {
+            return 0
+        }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "billInfo", for: indexPath)
-
-        configure(cell: cell, forItemAt: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "billInfo", for: indexPath) as! BillTableViewCell
+        
+        let bill = allBills.first!.bills[indexPath.row]
+        cell.updateCell(bill: bill)
 
         return cell
     }

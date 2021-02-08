@@ -7,8 +7,7 @@
 
 import Foundation
 
-class BillsURLController {
-    
+class AllBillsURLController {
     static func fetchBillsItems(completion: @escaping ([Bills]?) -> Void) {
         guard let baseURL = URL(string: "https://api.propublica.org/congress/v1/117/both/bills/active.json") else { fatalError() }
         
@@ -19,15 +18,7 @@ class BillsURLController {
         request.addValue(key, forHTTPHeaderField: "X-API-Key")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(data)
-            print(response)
-            print (error)
-        }.resume()
-        
-        let task = URLSession.shared.dataTask(with: baseURL) { (data, resposne, error) in
-            
             let jsonDecoder = JSONDecoder()
-            
             do {
                 if let data = data {
                     let billInfo = try jsonDecoder.decode(AllBills.self, from: data)
@@ -38,8 +29,6 @@ class BillsURLController {
             } catch {
                 print (error)
             }
-            
-        }
-        task.resume()
+        }.resume()
     }
 }
