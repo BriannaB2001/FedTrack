@@ -1,5 +1,5 @@
 //
-//  AllBillsTableViewController.swift
+//  BillsTableViewController.swift
 //  FedTrack
 //
 //  Created by Brianna Babcock on 2/5/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllBillsTableViewController: UITableViewController {
+class BillsTableViewController: UITableViewController {
     
     var allBills = [Bills]()
     
@@ -35,11 +35,18 @@ class AllBillsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "billInfo", for: indexPath) as! BillTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "billInfo", for: indexPath) as! BillsTableViewCell
         
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)
 
         return cell
     }
-}
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt
+    indexPath: IndexPath) -> CGFloat {
+        let normalCellHeight = CGFloat(90)
+       
+        return normalCellHeight
+        }
+    }

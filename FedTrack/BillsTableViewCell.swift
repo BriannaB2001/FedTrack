@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BillTableViewCell: UITableViewCell {
+class BillsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var billNumberLabel: UILabel!
     @IBOutlet weak var billNameLabel: UILabel!
@@ -25,6 +25,7 @@ class BillTableViewCell: UITableViewCell {
         billTypeLabel?.text = "\(bill.primarySubject)"
         
     }
+
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
