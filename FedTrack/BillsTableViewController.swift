@@ -49,4 +49,15 @@ class BillsTableViewController: UITableViewController {
        
         return normalCellHeight
         }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "BillsToSpecificBill" {
+            let specificBillTableViewController = segue.destination as!
+            SpecificBillTableViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            let selectedResult = allBills[indexPath.row]
+            specificBillTableViewController.specificBills = selectedResult
+        }
+    }
+    
     }

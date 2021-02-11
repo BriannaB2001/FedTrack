@@ -2,48 +2,37 @@
 //  SpecificBillTableViewController.swift
 //  FedTrack
 //
-//  Created by Brianna Babcock on 2/9/21.
+//  Created by Brianna Babcock on 2/11/21.
 //
 
 import UIKit
 
 class SpecificBillTableViewController: UITableViewController {
-    
-    @IBOutlet weak var specificBillNumberLabel: UILabel!
-    @IBOutlet weak var specificBillNameLabel: UILabel!
-    @IBOutlet weak var specificBillTypeLabel: UILabel!
-    @IBOutlet weak var specificBillSummaryTextView: UITextView!
+
+    var specificBills = [Bills]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AllBillsURLController.fetchBillsItems { (bills) in
+            DispatchQueue.main.async {
+                self.specificBills = bills ?? []
+                self.tableView.reloadData()
+            }
+        }
+        
     }
-    
-    
+
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-         Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! SpecificBillTitleTableViewCell
+        
+        let specificBill = specificBills.first!.bills[indexPath.row]
+        cell.updateTitleCell(bill: specificBill)
 
         return cell
+
     }
     
-
-    
-
-   
-
-
 }
