@@ -8,31 +8,21 @@
 import UIKit
 
 class SpecificBillTableViewController: UITableViewController {
-
-    var specificBills = [Bills]()
+    
+    @IBOutlet weak var specificBillNumberLabel: UILabel!
+    @IBOutlet weak var specificBillNameLabel: UILabel!
+    @IBOutlet weak var specificBillTypeLabel: UILabel!
+    
+    var specificBill: Bill?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AllBillsURLController.fetchBillsItems { (bills) in
-            DispatchQueue.main.async {
-                self.specificBills = bills ?? []
-                self.tableView.reloadData()
-            }
+        if let specificBill = specificBill {
+            specificBillNumberLabel?.text = "\(specificBill.number)"
+            specificBillNameLabel?.text = "\(specificBill.shortTitle)"
+            specificBillTypeLabel?.text = "\(specificBill.primarySubject)"
         }
         
     }
-
-    // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! SpecificBillTitleTableViewCell
-        
-        let specificBill = specificBills.first!.bills[indexPath.row]
-        cell.updateTitleCell(bill: specificBill)
-
-        return cell
-
-    }
-    
 }
