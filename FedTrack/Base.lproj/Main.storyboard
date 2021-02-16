@@ -71,10 +71,11 @@
                                                 <action selector="buttn:" destination="m3S-nC-Qil" eventType="touchUpInside" id="HBW-qV-Dz7"/>
                                             </connections>
                                         </button>
-                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" progressImage="Grey President" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-Rb-638">
-                                            <rect key="frame" x="35" y="64.5" width="275" height="1"/>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-Rb-638">
+                                            <rect key="frame" x="35" y="64.5" width="275" height="3"/>
+                                            <color key="tintColor" red="0.076543315540000004" green="0.076077114880000005" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="LWb-12-PWo"/>
+                                                <constraint firstAttribute="height" constant="3" id="LWb-12-PWo"/>
                                                 <constraint firstAttribute="width" constant="275" id="deq-fh-a8i"/>
                                             </constraints>
                                         </progressView>
@@ -136,10 +137,20 @@
                                     <outlet property="billNameLabel" destination="ol0-Qt-4cx" id="hsJ-CR-RCb"/>
                                     <outlet property="billNumberLabel" destination="a6N-gl-Q3K" id="hXL-cA-Usq"/>
                                     <outlet property="billTypeLabel" destination="0BS-JT-iqj" id="RQs-Me-Yzt"/>
+                                    <outlet property="houseHeight" destination="ZuL-kj-Jn9" id="TuZ-XQ-CGV"/>
                                     <outlet property="houseImage" destination="GVB-Xl-sEJ" id="8dV-Kq-dPr"/>
+                                    <outlet property="houseTopBillNameBottom" destination="JfC-Dk-jA9" id="smv-0A-sWo"/>
+                                    <outlet property="houseWidth" destination="ZuL-kj-Jn9" id="e9x-KI-5Rz"/>
+                                    <outlet property="presidentHeight" destination="x8g-Qe-zCn" id="rJx-Q0-VgN"/>
                                     <outlet property="presidentImage" destination="9Ud-Gv-1vO" id="oWq-EI-J7H"/>
+                                    <outlet property="presidentTopBillNameBottom" destination="R2O-TW-Cgb" id="wfz-Tp-tUO"/>
+                                    <outlet property="presidentWidth" destination="X9x-h2-G3i" id="zLS-Dv-qRo"/>
                                     <outlet property="progressView" destination="4h3-Rb-638" id="8h9-l1-A9H"/>
+                                    <outlet property="senateHeight" destination="qRI-fr-qUz" id="wAt-XU-jDo"/>
                                     <outlet property="senateImage" destination="Jrr-Gt-keF" id="4Bj-UP-AaG"/>
+                                    <outlet property="senateLeadingHouseTrailing" destination="Ujh-e5-zo0" id="QdH-aL-lP8"/>
+                                    <outlet property="senateTopBillNameBottom" destination="7Sy-wN-rO1" id="0rf-YR-zx7"/>
+                                    <outlet property="senateWidth" destination="kgS-Eh-UJT" id="II5-BU-1dz"/>
                                     <segue destination="DSN-Ve-4fG" kind="presentation" identifier="BillsToSpecificBill" id="psS-3d-UB3"/>
                                 </connections>
                             </tableViewCell>
