@@ -8,12 +8,12 @@
 import UIKit
 
 class BillsTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var billNumberLabel: UILabel!
     @IBOutlet weak var billNameLabel: UILabel!
     @IBOutlet weak var billTypeLabel: UILabel!
     
-   
+    
     @IBOutlet weak var houseImage: UIImageView!
     @IBOutlet weak var senateImage: UIImageView!
     @IBOutlet weak var presidentImage: UIImageView!
@@ -41,7 +41,7 @@ class BillsTableViewCell: UITableViewCell {
         billTypeLabel?.text = "\(bill.primarySubject)"
         
     }
-
+    
     func updateImage(bill: Bill) {
         
         if let house = bill.house  {
@@ -50,19 +50,19 @@ class BillsTableViewCell: UITableViewCell {
             houseWidth.constant = 80
             houseHeight.constant = 87
             houseTopBillNameBottom.constant = -4
-
+            
         } else {
             houseImage.image = UIImage(named: "GreyHouse")
         }
         
         if let senate = bill.senate  {
-           senateImage.image = UIImage(named: "BlueSenate")
+            senateImage.image = UIImage(named: "BlueSenate")
             progressView.progress = 0.7
             senateWidth.constant = 105
-           senateHeight.constant = 110
+            senateHeight.constant = 110
             senateTopBillNameBottom.constant = 8
             senateLeadingHouseTrailing.constant = 0
-           
+            
         } else {
             senateImage.image = UIImage(named: "GreySenate")
         }
@@ -80,8 +80,8 @@ class BillsTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }
