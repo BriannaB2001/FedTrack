@@ -46,35 +46,44 @@ class BillsTableViewCell: UITableViewCell {
         
         if let house = bill.house  {
             houseImage.image = UIImage(named: "BlueHouse")
-            progressView.progress = 0.38
+//            progressView.progress = 0
+//            progressView.progress = 0.38
             houseWidth.constant = 80
             houseHeight.constant = 87
             houseTopBillNameBottom.constant = -4
             
         } else {
             houseImage.image = UIImage(named: "GreyHouse")
+            houseWidth.constant = 86
+            houseHeight.constant = 93
+            houseTopBillNameBottom.constant = -10
         }
         
         if let senate = bill.senate  {
             senateImage.image = UIImage(named: "BlueSenate")
-            progressView.progress = 0.7
+//            progressView.progress = 0.7
             senateWidth.constant = 105
             senateHeight.constant = 110
-            senateTopBillNameBottom.constant = 8
+            senateTopBillNameBottom.constant = -10
             senateLeadingHouseTrailing.constant = 0
             
         } else {
             senateImage.image = UIImage(named: "GreySenate")
+            senateWidth.constant = 86
+            senateHeight.constant = 80
+            senateTopBillNameBottom.constant = -5
         }
         
         if let enacted = bill.enacted  {
             presidentImage.image = UIImage(named: "BluePresident")
-            progressView.progress = 1.0
+//            progressView.progress = 1.0
             presidentWidth.constant = 120
             presidentHeight.constant = 120
             presidentTopBillNameBottom.constant = -18
         } else {
             presidentImage.image = UIImage(named: "GreyPresident")
+            presidentWidth.constant = 109
+            presidentHeight.constant = 99
         }
     }
     
