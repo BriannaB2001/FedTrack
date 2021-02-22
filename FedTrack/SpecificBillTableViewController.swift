@@ -11,6 +11,8 @@ class SpecificBillTableViewController: UITableViewController {
     
     @IBOutlet weak var specificBillNumberLabel: UILabel!
     @IBOutlet weak var specificBillNameLabel: UILabel!
+    @IBOutlet weak var specificBillSummaryLabel: UILabel!
+    
     @IBOutlet weak var specificBillHouseImage: UIImageView!
     @IBOutlet weak var specificBillSenateImage: UIImageView!
     @IBOutlet weak var specificBillPresidentImage: UIImageView!
@@ -25,6 +27,7 @@ class SpecificBillTableViewController: UITableViewController {
     @IBOutlet weak var specificHouseTopBillNameBottom: NSLayoutConstraint!
     @IBOutlet weak var specificSenateTopBillNameBottom: NSLayoutConstraint!
     @IBOutlet weak var specificPresidentTopBillNameBottom: NSLayoutConstraint!
+    @IBOutlet weak var lastVoteDateLabel: UILabel!
     
     var specificBill: Bill?
     
@@ -34,11 +37,22 @@ class SpecificBillTableViewController: UITableViewController {
         if let specificBill = specificBill {
             specificBillNumberLabel?.text = "\(specificBill.number)"
             specificBillNameLabel?.text = "\(specificBill.shortTitle)"
+            specificBillSummaryLabel?.text = "\(specificBill.summary)"
+//            lastVoteDateLabel?.text = "\(specificBill.lastVote ?? "N/A")"
+            
+//            if Bill.summary == true { specificBillSummaryLabel?.text = "\(specificBill.summary)"
+//
+//            }
+//            else {
+//                specificBillNumberLabel?.text = "Summary N/A"
+//            }
+            
+            
         }
         
         updateImage(bill: specificBill!)
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44
+        //        tableView.rowHeight = UITableView.automaticDimension
+        //        tableView.estimatedRowHeight = 44
         
     }
     
@@ -87,12 +101,12 @@ class SpecificBillTableViewController: UITableViewController {
     }
     
     
-//        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//            return UITableView.automaticDimension
-//        }
-//
-//        override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//            return 100
-//
-//        }
+    //        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //            return UITableView.automaticDimension
+    //        }
+    //
+    //        override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    //            return 100
+    //
+    //        }
 }

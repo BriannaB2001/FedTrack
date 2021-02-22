@@ -20,8 +20,8 @@ class BillsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
     }
-    
     
     // MARK: - Table view data source
     
