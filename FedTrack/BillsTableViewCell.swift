@@ -46,8 +46,8 @@ class BillsTableViewCell: UITableViewCell {
         
         if let house = bill.house  {
             houseImage.image = UIImage(named: "BlueHouse")
-//            progressView.progress = 0
-//            progressView.progress = 0.38
+            //            progressView.progress = 0
+            //            progressView.progress = 0.38
             houseWidth.constant = 80
             houseHeight.constant = 87
             houseTopBillNameBottom.constant = -4
@@ -61,7 +61,7 @@ class BillsTableViewCell: UITableViewCell {
         
         if let senate = bill.senate  {
             senateImage.image = UIImage(named: "BlueSenate")
-//            progressView.progress = 0.7
+            //            progressView.progress = 0.7
             senateWidth.constant = 105
             senateHeight.constant = 110
             senateTopBillNameBottom.constant = -10
@@ -76,7 +76,7 @@ class BillsTableViewCell: UITableViewCell {
         
         if let enacted = bill.enacted  {
             presidentImage.image = UIImage(named: "BluePresident")
-//            progressView.progress = 1.0
+            //            progressView.progress = 1.0
             presidentWidth.constant = 120
             presidentHeight.constant = 120
             presidentTopBillNameBottom.constant = -18

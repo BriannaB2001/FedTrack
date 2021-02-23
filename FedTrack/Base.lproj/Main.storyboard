@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="crH-JH-DCA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmL-0u-3Ws">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="billInfo" rowHeight="88" id="lVn-Xo-bxg" customClass="BillsTableViewCell" customModule="FedTrack" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="billCell" rowHeight="88" id="lVn-Xo-bxg" customClass="BillsTableViewCell" customModule="FedTrack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lVn-Xo-bxg" id="neK-Uc-K1T">
@@ -121,7 +121,7 @@
                                     <outlet property="billNumberLabel" destination="a6N-gl-Q3K" id="hXL-cA-Usq"/>
                                     <outlet property="billTypeLabel" destination="0BS-JT-iqj" id="RQs-Me-Yzt"/>
                                     <outlet property="houseHeight" destination="ZuL-kj-Jn9" id="TuZ-XQ-CGV"/>
-                                    <outlet property="houseImage" destination="GVB-Xl-sEJ" id="8dV-Kq-dPr"/>
+                                    <outlet property="houseImage" destination="GVB-Xl-sEJ" id="lhO-4T-Bpt"/>
                                     <outlet property="houseTopBillNameBottom" destination="JfC-Dk-jA9" id="smv-0A-sWo"/>
                                     <outlet property="houseWidth" destination="ZuL-kj-Jn9" id="e9x-KI-5Rz"/>
                                     <outlet property="presidentHeight" destination="x8g-Qe-zCn" id="rJx-Q0-VgN"/>
@@ -157,15 +157,16 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdn-bG-LFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4465.217391304348" y="-137.27678571428569"/>
+            <point key="canvasLocation" x="6285.507246376812" y="-137.27678571428569"/>
         </scene>
-        <!--Specific Bill Table View Controller-->
+        <!--Bill Info Table View Controller-->
         <scene sceneID="Ult-e2-9fy">
             <objects>
-                <tableViewController id="DSN-Ve-4fG" customClass="SpecificBillTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="DSN-Ve-4fG" customClass="BillInfoTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0LU-nq-GbV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,11 +174,11 @@
                         <sections>
                             <tableViewSection id="8E7-ak-ajq">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="211" id="zYb-Rf-Apa">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="211"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="147" id="zYb-Rf-Apa">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="147"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zYb-Rf-Apa" id="QC5-Qc-nls">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-2X-d4e">
@@ -193,10 +194,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s6p-LA-P3m">
-                                                    <rect key="frame" x="35" y="62.5" width="275" height="3"/>
+                                                    <rect key="frame" x="35" y="62.5" width="275" height="1"/>
                                                     <color key="tintColor" red="0.076543315540000004" green="0.076077114880000005" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="3" id="HKB-Rz-ONb"/>
+                                                        <constraint firstAttribute="height" constant="1" id="HKB-Rz-ONb"/>
                                                         <constraint firstAttribute="width" constant="275" id="sNh-Gx-COE"/>
                                                     </constraints>
                                                 </progressView>
@@ -251,11 +252,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="230" id="Kil-Mf-VXM">
-                                        <rect key="frame" x="0.0" y="239" width="414" height="230"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="358" id="Kil-Mf-VXM">
+                                        <rect key="frame" x="0.0" y="175" width="414" height="358"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kil-Mf-VXM" id="T4U-at-2eb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="358"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary N/A" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJW-ao-HWz">
@@ -273,7 +274,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="59" id="K9g-ah-kzT">
-                                        <rect key="frame" x="0.0" y="469" width="414" height="59"/>
+                                        <rect key="frame" x="0.0" y="533" width="414" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9g-ah-kzT" id="apT-kp-k7o">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
@@ -297,7 +298,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MPw-KH-4ks">
-                                        <rect key="frame" x="0.0" y="528" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="592" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MPw-KH-4ks" id="PFO-Fk-ftD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -322,38 +323,70 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="billInfoHouseHeight" destination="87S-09-xbc" id="aXH-PQ-ngQ"/>
+                        <outlet property="billInfoHouseImage" destination="B3m-DJ-5v2" id="bPZ-Ib-Tmf"/>
+                        <outlet property="billInfoHouseTopBillNameBottom" destination="FRm-Xc-HXX" id="wV5-iZ-OGN"/>
+                        <outlet property="billInfoHouseWidth" destination="tQs-fc-w6Y" id="bAd-ub-Xde"/>
+                        <outlet property="billInfoNameLabel" destination="8OE-6q-snC" id="mnN-H4-XXn"/>
+                        <outlet property="billInfoNumberLabel" destination="m5h-2X-d4e" id="Fq1-jz-ZIb"/>
+                        <outlet property="billInfoPresidentHeight" destination="hOw-DT-UeH" id="UP8-aD-GC0"/>
+                        <outlet property="billInfoPresidentImage" destination="i9e-Bh-irH" id="1oF-qb-v9H"/>
+                        <outlet property="billInfoPresidentTopBillNameBottom" destination="1Ax-3S-36P" id="7CV-4P-YEf"/>
+                        <outlet property="billInfoPresidentWidth" destination="Wz6-jb-2Ek" id="D1K-gN-wDy"/>
+                        <outlet property="billInfoProgressView" destination="s6p-LA-P3m" id="sLb-bw-H4Q"/>
+                        <outlet property="billInfoSenateHeight" destination="vaB-uj-LH6" id="MnP-Pm-bRn"/>
+                        <outlet property="billInfoSenateImage" destination="rHW-zM-wV4" id="9IR-VL-NZy"/>
+                        <outlet property="billInfoSenateTopBillNameBottom" destination="iVC-x4-6Zn" id="VLp-j6-xK7"/>
+                        <outlet property="billInfoSenateWidth" destination="lae-3r-Hvr" id="CrP-XM-mhx"/>
+                        <outlet property="billInfoSummaryLabel" destination="dJW-ao-HWz" id="LlW-xV-UhK"/>
                         <outlet property="lastVoteDateLabel" destination="h7T-YM-42g" id="4as-Ho-OmR"/>
-                        <outlet property="specificBillHouseHeight" destination="87S-09-xbc" id="O7f-kR-nTG"/>
-                        <outlet property="specificBillHouseImage" destination="B3m-DJ-5v2" id="Dyy-V6-dze"/>
-                        <outlet property="specificBillHouseWidth" destination="tQs-fc-w6Y" id="6vb-Q0-C7q"/>
-                        <outlet property="specificBillNameLabel" destination="8OE-6q-snC" id="ceO-5r-yQ7"/>
-                        <outlet property="specificBillNumberLabel" destination="m5h-2X-d4e" id="I9n-pN-LVz"/>
-                        <outlet property="specificBillPresidentHeight" destination="hOw-DT-UeH" id="HAc-R1-5Jc"/>
-                        <outlet property="specificBillPresidentImage" destination="i9e-Bh-irH" id="Khd-YG-rXD"/>
-                        <outlet property="specificBillPresidentWidth" destination="Wz6-jb-2Ek" id="nkq-Id-iKl"/>
-                        <outlet property="specificBillProgressView" destination="s6p-LA-P3m" id="cCT-nd-Kaq"/>
-                        <outlet property="specificBillSenateHeight" destination="vaB-uj-LH6" id="ShD-Fq-is5"/>
-                        <outlet property="specificBillSenateImage" destination="rHW-zM-wV4" id="myR-3G-Y6Z"/>
-                        <outlet property="specificBillSenateWidth" destination="lae-3r-Hvr" id="Zw9-Ud-iHR"/>
-                        <outlet property="specificBillSummaryLabel" destination="dJW-ao-HWz" id="8sd-98-bFc"/>
-                        <outlet property="specificHouseTopBillNameBottom" destination="FRm-Xc-HXX" id="xN2-xj-8Bd"/>
-                        <outlet property="specificPresidentTopBillNameBottom" destination="1Ax-3S-36P" id="iXp-hZ-z2R"/>
-                        <outlet property="specificSenateTopBillNameBottom" destination="iVC-x4-6Zn" id="lVH-we-gie"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5e-97-c9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5317.3913043478269" y="-137.27678571428569"/>
+            <point key="canvasLocation" x="7137.68115942029" y="-137.27678571428569"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lW4-xV-6FH">
+        <!--Table View Controller-->
+        <scene sceneID="lWP-Ui-CGa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="crH-JH-DCA" sceneMemberID="viewController">
+                <tableViewController id="Cbo-u1-Las" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ptR-56-3A4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mGc-6Z-4Q9">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mGc-6Z-4Q9" id="kSh-2R-g1K">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cbo-u1-Las" id="yUB-Z6-pAJ"/>
+                            <outlet property="delegate" destination="Cbo-u1-Las" id="MKV-6k-OYX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDI-C1-oq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4587" y="-127"/>
+        </scene>
+        <!--Bills-->
+        <scene sceneID="MRI-j5-Jfx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GmL-0u-3Ws" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bills" image="flag.fill" catalog="system" id="d4R-3m-8rL">
+                        <color key="badgeColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="QHt-zO-4sL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="zZ0-St-Ixd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.076543315540000004" green="0.076077114880000005" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -361,18 +394,19 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="m3S-nC-Qil" kind="relationship" relationship="rootViewController" id="5M9-ts-tYP"/>
+                        <segue destination="m3S-nC-Qil" kind="relationship" relationship="rootViewController" id="lgX-uX-a4h"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5MJ-B9-vh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3j-lL-FVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3555.072463768116" y="-137.27678571428569"/>
+            <point key="canvasLocation" x="5375.36231884058" y="-137.27678571428569"/>
         </scene>
     </scenes>
     <resources>
         <image name="BlueC" width="102" height="70"/>
         <image name="Empty Default Star" width="419" height="384"/>
         <image name="Yellow Selected Star" width="172.5" height="160"/>
+        <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

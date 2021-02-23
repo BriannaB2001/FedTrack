@@ -35,7 +35,7 @@ class BillsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "billInfo", for: indexPath) as! BillsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! BillsTableViewCell
         
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)
@@ -53,11 +53,11 @@ class BillsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "BillsToSpecificBill" {
-            let specificBillTableViewController = segue.destination as!
-                SpecificBillTableViewController
+            let billInfoTableViewController = segue.destination as!
+                BillInfoTableViewController
             let indexPath = tableView.indexPathForSelectedRow!
             let selectedResult = allBills.first!.bills[indexPath.row]
-            specificBillTableViewController.specificBill = selectedResult
+            billInfoTableViewController.billInfo = selectedResult
         }
     }
     
