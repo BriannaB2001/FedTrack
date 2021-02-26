@@ -17,6 +17,9 @@
 		DA1B06C325E4495000F928F7 /* LawsURLController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B06C225E4495000F928F7 /* LawsURLController.swift */; };
 		DA2129C025D1F07000792BEF /* BillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2129BF25D1F07000792BEF /* BillsTableViewCell.swift */; };
 		DA54D18525E8405300E5FD0C /* PopOverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D18425E8405300E5FD0C /* PopOverTableViewController.swift */; };
+		DA9A189625E96ED7001037EF /* FavoritedBillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A189525E96ED7001037EF /* FavoritedBillTableViewController.swift */; };
+		DA9A189925E96EED001037EF /* FavoritedBillInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A189825E96EED001037EF /* FavoritedBillInfoTableViewController.swift */; };
+		DA9A189C25E96FA4001037EF /* FavoritedBillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A189B25E96FA4001037EF /* FavoritedBillTableViewCell.swift */; };
 		DAAD3A3925D5ACEC0098394B /* BillInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD3A3825D5ACEC0098394B /* BillInfoTableViewController.swift */; };
 		DAE7BBFE25CDC8A600E99075 /* BillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7BBFD25CDC8A600E99075 /* BillsTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,9 @@
 		DA1B06C225E4495000F928F7 /* LawsURLController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawsURLController.swift; sourceTree = "<group>"; };
 		DA2129BF25D1F07000792BEF /* BillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTableViewCell.swift; sourceTree = "<group>"; };
 		DA54D18425E8405300E5FD0C /* PopOverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverTableViewController.swift; sourceTree = "<group>"; };
+		DA9A189525E96ED7001037EF /* FavoritedBillTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedBillTableViewController.swift; sourceTree = "<group>"; };
+		DA9A189825E96EED001037EF /* FavoritedBillInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedBillInfoTableViewController.swift; sourceTree = "<group>"; };
+		DA9A189B25E96FA4001037EF /* FavoritedBillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedBillTableViewCell.swift; sourceTree = "<group>"; };
 		DAAD3A3825D5ACEC0098394B /* BillInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInfoTableViewController.swift; sourceTree = "<group>"; };
 		DAE7BBFD25CDC8A600E99075 /* BillsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,11 +77,14 @@
 				DA04873925CC7226003920C0 /* AppDelegate.swift */,
 				DA04873B25CC7226003920C0 /* SceneDelegate.swift */,
 				DA04873F25CC7226003920C0 /* Main.storyboard */,
-				DAAD3A3825D5ACEC0098394B /* BillInfoTableViewController.swift */,
-				DAE7BBFD25CDC8A600E99075 /* BillsTableViewController.swift */,
-				DA54D18425E8405300E5FD0C /* PopOverTableViewController.swift */,
-				DA2129BF25D1F07000792BEF /* BillsTableViewCell.swift */,
 				DA04874E25CC7359003920C0 /* AllBills.swift */,
+				DAE7BBFD25CDC8A600E99075 /* BillsTableViewController.swift */,
+				DA2129BF25D1F07000792BEF /* BillsTableViewCell.swift */,
+				DA54D18425E8405300E5FD0C /* PopOverTableViewController.swift */,
+				DAAD3A3825D5ACEC0098394B /* BillInfoTableViewController.swift */,
+				DA9A189525E96ED7001037EF /* FavoritedBillTableViewController.swift */,
+				DA9A189B25E96FA4001037EF /* FavoritedBillTableViewCell.swift */,
+				DA9A189825E96EED001037EF /* FavoritedBillInfoTableViewController.swift */,
 				DA04875125CC7456003920C0 /* AllBillsURLController.swift */,
 				DA1B06C225E4495000F928F7 /* LawsURLController.swift */,
 				DA04874225CC7229003920C0 /* Assets.xcassets */,
@@ -156,6 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA54D18525E8405300E5FD0C /* PopOverTableViewController.swift in Sources */,
+				DA9A189625E96ED7001037EF /* FavoritedBillTableViewController.swift in Sources */,
+				DA9A189C25E96FA4001037EF /* FavoritedBillTableViewCell.swift in Sources */,
 				DA1B06C325E4495000F928F7 /* LawsURLController.swift in Sources */,
 				DAAD3A3925D5ACEC0098394B /* BillInfoTableViewController.swift in Sources */,
 				DA04875225CC7456003920C0 /* AllBillsURLController.swift in Sources */,
@@ -163,6 +174,7 @@
 				DA04873A25CC7226003920C0 /* AppDelegate.swift in Sources */,
 				DAE7BBFE25CDC8A600E99075 /* BillsTableViewController.swift in Sources */,
 				DA2129C025D1F07000792BEF /* BillsTableViewCell.swift in Sources */,
+				DA9A189925E96EED001037EF /* FavoritedBillInfoTableViewController.swift in Sources */,
 				DA04873C25CC7226003920C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

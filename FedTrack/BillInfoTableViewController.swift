@@ -49,6 +49,8 @@ class BillInfoTableViewController: UITableViewController {
             }
         }
         updateImage(bill: billInfo!)
+        
+        
     }
     
     func updateImage(bill: Bill) {

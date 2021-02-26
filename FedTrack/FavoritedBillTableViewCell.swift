@@ -1,15 +1,15 @@
 //
-//  BillTableViewCell.swift
+//  FavoritedBillTableViewCell.swift
 //  FedTrack
 //
-//  Created by Brianna Babcock on 2/8/21.
+//  Created by Brianna Babcock on 2/26/21.
 //
 
 import UIKit
 
-class BillsTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var billNumberLabel: UILabel!
+class FavoritedBillTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var favoritedBillNumberLabel: UILabel!
     @IBOutlet weak var billNameLabel: UILabel!
     @IBOutlet weak var billTypeLabel: UILabel!
     
@@ -33,13 +33,13 @@ class BillsTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func updateCell (bill: Bill) {
+//    func updateCell (bill: Bill) {
+//        
+//        billNumberLabel?.text = "\(bill.number)"
+//        billNameLabel?.text = "\(bill.shortTitle)"
+//        billTypeLabel?.text = "\(bill.primarySubject)"
         
-        billNumberLabel?.text = "\(bill.number)"
-        billNameLabel?.text = "\(bill.shortTitle)"
-        billTypeLabel?.text = "\(bill.primarySubject)"
-        
-    }
+//    }
     
     func updateImage(bill: Bill) {
         
@@ -87,5 +87,5 @@ class BillsTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
 }
+
