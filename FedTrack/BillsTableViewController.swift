@@ -7,9 +7,18 @@
 
 import UIKit
 
-class BillsTableViewController: UITableViewController {
+class BillsTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
     var allBills = [Bills]()
+    
+    @IBAction func displayPopOver(_ sender: UIBarButtonItem) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "PopOverTableViewController")
+            vc.modalPresentationStyle = .popover
+            let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+            popover.barButtonItem = sender
+            present(vc, animated: true, completion:nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +29,6 @@ class BillsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        
     }
     
     // MARK: - Table view data source
@@ -60,5 +68,4 @@ class BillsTableViewController: UITableViewController {
             billInfoTableViewController.billInfo = selectedResult
         }
     }
-    
 }

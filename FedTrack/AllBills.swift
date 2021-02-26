@@ -12,7 +12,7 @@ struct Bill: Codable {
     var shortTitle: String
     var summary: String
     var primarySubject: String
-    //    var lastVote: String?
+    var latestActionDate: String
     var sponsorName: String
     var active: Bool
     var house: String?
@@ -24,7 +24,7 @@ struct Bill: Codable {
         case shortTitle = "short_title"
         case summary = "summary"
         case primarySubject = "primary_subject"
-        //        case lastVote = "last_vote"
+        case latestActionDate = "latest_major_action_date"
         case sponsorName = "sponsor_name"
         case active = "active"
         case house = "house_passage"
