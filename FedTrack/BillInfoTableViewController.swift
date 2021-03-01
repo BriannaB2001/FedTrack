@@ -18,6 +18,8 @@ class BillInfoTableViewController: UITableViewController {
     @IBOutlet weak var billInfoPresidentImage: UIImageView!
     @IBOutlet weak var billInfoProgressView: UIProgressView!
     @IBOutlet weak var latestActionDateLabel: UILabel!
+    @IBOutlet weak var latestActionLabel: UILabel!
+    @IBOutlet weak var sponsorTitleLabel: UILabel!
     @IBOutlet weak var sponsorNameLabel: UILabel!
     
     @IBOutlet weak var billInfoHouseHeight: NSLayoutConstraint!
@@ -29,7 +31,7 @@ class BillInfoTableViewController: UITableViewController {
     @IBOutlet weak var billInfoHouseTopBillNameBottom: NSLayoutConstraint!
     @IBOutlet weak var billInfoSenateTopBillNameBottom: NSLayoutConstraint!
     @IBOutlet weak var billInfoPresidentTopBillNameBottom: NSLayoutConstraint!
-
+    
     var billInfo: Bill?
     
     override func viewDidLoad() {
@@ -40,17 +42,15 @@ class BillInfoTableViewController: UITableViewController {
             billInfoNameLabel?.text = "\(billInfo.shortTitle)"
             billInfoSummaryLabel?.text = "\(billInfo.summary)"
             latestActionDateLabel?.text = "\(billInfo.latestActionDate)"
+            latestActionLabel?.text = "\(billInfo.latestAction)"
+            sponsorTitleLabel?.text = "\(billInfo.sponsorTitle)"
             sponsorNameLabel?.text = "\(billInfo.sponsorName)"
-            
-            
             
             if billInfo.summary.isEmpty {
                 billInfoSummaryLabel?.text = "Summary N/A"
             }
         }
         updateImage(bill: billInfo!)
-        
-        
     }
     
     func updateImage(bill: Bill) {

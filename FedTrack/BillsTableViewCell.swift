@@ -9,6 +9,8 @@ import UIKit
 
 class BillsTableViewCell: UITableViewCell {
     
+    var allBills = [Bills]()
+    
     @IBOutlet weak var billNumberLabel: UILabel!
     @IBOutlet weak var billNameLabel: UILabel!
     @IBOutlet weak var billTypeLabel: UILabel!
@@ -28,6 +30,7 @@ class BillsTableViewCell: UITableViewCell {
     @IBOutlet weak var presidentWidth: NSLayoutConstraint!
     @IBOutlet weak var presidentHeight: NSLayoutConstraint!
     @IBOutlet weak var presidentTopBillNameBottom: NSLayoutConstraint!
+    @IBOutlet weak var favoritedButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -85,7 +88,18 @@ class BillsTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+    }
+    @IBAction func saveBillButtonTapped(_ sender: Any) {
+        
+//        let currentCatFactText = allBills[catFactIndex].text
+//        if let existingEntry =  CoreDataManager.shared.entryForText(text: currentCatFactText ) {
+//            CoreDataManager.shared.deleteEntry(entry: existingEntry)
+//            favoritedButton.isSelected = false
+//        } else {
+//            CoreDataManager.shared.createNewEntry(text: allBills[catFactIndex].text, type: .catFact)
+//            favoritedButton.isSelected = true
+//        }
+        
     }
     
 }
