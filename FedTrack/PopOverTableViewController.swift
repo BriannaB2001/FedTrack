@@ -9,13 +9,15 @@ import UIKit
 
 class PopOverTableViewController: UITableViewController {
     
-    var subjects = ["Goverment Operation and Politics", "Civils Rights and Liberties, Minority Issues", ]
-    var allBills = [Bill]()
+    var subjects = ["All", "Agriculture and Food", "Animals", "Armed Forces and National security", "Arts, Culture, Religion", "Civil Rights and Liberties, Minority Issues", "Commerce", "Crime and Law Enforcement", "Economics and Public Finance", " Education", "Emergency Management", "Energy", "Environment Protection", "Families", "Finance and Financial Sector", "Foreign Trade and International Finance", " Geographic Areas, Entities, and Committees", "Government Operations and Politics", "Health", "Housing and Community Development", "Immigration", "International Affairs", "Labor and Employment", "Law", "Native Amercians", "Private Legislation", "Public Lands and Natural Resources", "Science, Technology, Communications", "Social Sciences and History", "Social Welfare", "Sports and Recreation","Taxation", "Transportation and Public works", "Water Resources Development"]
+    
+    var allBills = [Bills]()
+    
+    var subjectDelegate: SubjectChosen?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
     // MARK: - Table view data source
     
@@ -25,10 +27,8 @@ class PopOverTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return subjects.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "popupCell", for: indexPath)
@@ -38,16 +38,26 @@ class PopOverTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let subject = subjects[indexPath.row]
+        print (subject)
+        let billsForSubjects = subjectSorter(selectedSubject: subject)
+        subjectDelegate?.subjectBills(bill: billsForSubjects)
+        self.dismiss(animated: true, completion: nil)
     }
     
-//    func subjectSorter() {
-//
-//        for bill in allBills {
-//        if bill.primarySubject == selectedSubject {
-//        newBillArray.append(bill)
-//        }
-//        }
-//    }
-    
+    func subjectSorter(selectedSubject: String) -> [Bills] {
+        var newBillArray: [Bill] = []
+        let bills: [Bill] = allBills.first!.bills
+        for bill in bills {
+            if bill.primarySubject == selectedSubject {
+                newBillArray.append(bill)
+            }
+        }
+        
+        return [Bills( bills: newBillArray)]
+    }
+}
+
+protocol SubjectChosen {
+    func subjectBills(bill: [Bills])
 }

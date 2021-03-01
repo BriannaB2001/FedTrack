@@ -7,13 +7,16 @@
 
 import UIKit
 
-class BillsTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
+class BillsTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate, SubjectChosen {
+    
     
     var allBills = [Bills]()
     
     @IBAction func displayPopOver(_ sender: UIBarButtonItem) {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "PopOverTableViewController")
+            let vc = storyboard.instantiateViewController(withIdentifier: "PopOverTableViewController") as! PopOverTableViewController
+        vc.subjectDelegate = self
+        vc.allBills = allBills
             vc.modalPresentationStyle = .popover
             let popover: UIPopoverPresentationController = vc.popoverPresentationController!
             popover.barButtonItem = sender
@@ -30,6 +33,15 @@ class BillsTableViewController: UITableViewController, UIPopoverPresentationCont
             }
         }
     }
+    
+    // Mark: - Subject Chosen Delegate
+    
+    func subjectBills(bill: [Bills]) {
+        allBills = bill
+        tableView.reloadData()
+    }
+    
+    
     
     // MARK: - Table view data source
     
