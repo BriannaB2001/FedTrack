@@ -79,22 +79,62 @@
 				DA04873925CC7226003920C0 /* AppDelegate.swift */,
 				DA04873B25CC7226003920C0 /* SceneDelegate.swift */,
 				DA04873F25CC7226003920C0 /* Main.storyboard */,
-				DA04874E25CC7359003920C0 /* AllBills.swift */,
-				DAF4891F25ED6BE60086E2B9 /* LoginViewController.swift */,
-				DAF4892225ED6BEF0086E2B9 /* SignUpViewController.swift */,
-				DAE7BBFD25CDC8A600E99075 /* BillsTableViewController.swift */,
-				DA2129BF25D1F07000792BEF /* BillsTableViewCell.swift */,
-				DA54D18425E8405300E5FD0C /* PopOverTableViewController.swift */,
-				DAAD3A3825D5ACEC0098394B /* BillInfoTableViewController.swift */,
-				DA9A189525E96ED7001037EF /* FavoritedBillTableViewController.swift */,
-				DA9A189B25E96FA4001037EF /* FavoritedBillTableViewCell.swift */,
-				DA04875125CC7456003920C0 /* AllBillsURLController.swift */,
-				DA1B06C225E4495000F928F7 /* LawsURLController.swift */,
+				DA57C90A25EEB25000F903BD /* API Data */,
+				DA57C90925EEB1E700F903BD /* Login and SignUp */,
+				DA57C90525EEB17100F903BD /* Bills */,
+				DA57C90725EEB1A700F903BD /* Favorited Bills */,
+				DA57C90825EEB1B900F903BD /* URL Controllers */,
 				DA04874225CC7229003920C0 /* Assets.xcassets */,
 				DA04874425CC7229003920C0 /* LaunchScreen.storyboard */,
 				DA04874725CC7229003920C0 /* Info.plist */,
 			);
 			path = FedTrack;
+			sourceTree = "<group>";
+		};
+		DA57C90525EEB17100F903BD /* Bills */ = {
+			isa = PBXGroup;
+			children = (
+				DAE7BBFD25CDC8A600E99075 /* BillsTableViewController.swift */,
+				DA2129BF25D1F07000792BEF /* BillsTableViewCell.swift */,
+				DAAD3A3825D5ACEC0098394B /* BillInfoTableViewController.swift */,
+				DA54D18425E8405300E5FD0C /* PopOverTableViewController.swift */,
+			);
+			path = Bills;
+			sourceTree = "<group>";
+		};
+		DA57C90725EEB1A700F903BD /* Favorited Bills */ = {
+			isa = PBXGroup;
+			children = (
+				DA9A189525E96ED7001037EF /* FavoritedBillTableViewController.swift */,
+				DA9A189B25E96FA4001037EF /* FavoritedBillTableViewCell.swift */,
+			);
+			path = "Favorited Bills";
+			sourceTree = "<group>";
+		};
+		DA57C90825EEB1B900F903BD /* URL Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA04875125CC7456003920C0 /* AllBillsURLController.swift */,
+				DA1B06C225E4495000F928F7 /* LawsURLController.swift */,
+			);
+			path = "URL Controllers";
+			sourceTree = "<group>";
+		};
+		DA57C90925EEB1E700F903BD /* Login and SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				DAF4892225ED6BEF0086E2B9 /* SignUpViewController.swift */,
+				DAF4891F25ED6BE60086E2B9 /* LoginViewController.swift */,
+			);
+			path = "Login and SignUp";
+			sourceTree = "<group>";
+		};
+		DA57C90A25EEB25000F903BD /* API Data */ = {
+			isa = PBXGroup;
+			children = (
+				DA04874E25CC7359003920C0 /* AllBills.swift */,
+			);
+			path = "API Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
