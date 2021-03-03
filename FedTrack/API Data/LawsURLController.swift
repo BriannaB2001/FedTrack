@@ -10,13 +10,13 @@ import Foundation
 class LawsURLController {
     static func fetchLawsItems(completion: @escaping ([Bills]?) -> Void) {
         guard let baseURL = URL(string: "https://api.propublica.org/congress/v1/117/both/bills/enacted.json") else { fatalError() }
-        
+
         let key = "VBuip8RlZmugied6nsDVbd8j1b4fxJ2Y3kiFrgNd"
-        
+
         var request = URLRequest(url: baseURL)
         request.httpMethod = "GET"
         request.addValue(key, forHTTPHeaderField: "X-API-Key")
-        
+
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             let jsonDecoder = JSONDecoder()
             do {

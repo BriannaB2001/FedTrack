@@ -147,7 +147,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bills" leftItemsSupplementBackButton="YES" id="VG2-WU-8Mz">
-                        <barButtonItem key="rightBarButtonItem" id="dZ6-NU-uJd">
+                        <barButtonItem key="rightBarButtonItem" image="Filter Image" id="dZ6-NU-uJd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="displayPopOver:" destination="m3S-nC-Qil" id="wOZ-ET-Iph"/>
@@ -196,7 +196,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOS-Tc-8WG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7928" y="-137"/>
+            <point key="canvasLocation" x="7704" y="-816"/>
         </scene>
         <!--Bill Info Table View Controller-->
         <scene sceneID="Ult-e2-9fy">
@@ -411,7 +411,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5e-97-c9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8628.9855072463779" y="-137.27678571428569"/>
+            <point key="canvasLocation" x="8091" y="-137"/>
         </scene>
         <!--Bills-->
         <scene sceneID="MRI-j5-Jfx">
@@ -445,6 +445,7 @@
     <resources>
         <image name="BlueC" width="102" height="70"/>
         <image name="Empty Default Star" width="419" height="384"/>
+        <image name="Filter Image" width="62" height="58"/>
         <image name="Yellow Selected Star" width="172.5" height="160"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
