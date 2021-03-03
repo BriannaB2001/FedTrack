@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Laws Table View Controller-->
+        <scene sceneID="1F2-5d-Lu2">
+            <objects>
+                <tableViewController id="jl0-aO-3Vs" customClass="LawsTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U8g-om-pPO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="billCell" rowHeight="88" id="6ip-bB-xae" customClass="LawsTableViewCell" customModule="FedTrack" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6ip-bB-xae" id="OSN-Iv-I4I">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yil-RH-cPQ">
+                                            <rect key="frame" x="10" y="8" width="21.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bill Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwe-Y2-Si7">
+                                            <rect key="frame" x="36.5" y="8" width="68.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mod-Kr-2mR">
+                                            <rect key="frame" x="10" y="30.5" width="48.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2Z-R2-AF6">
+                                            <rect key="frame" x="369" y="8" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="J90-fS-ZvJ"/>
+                                                <constraint firstAttribute="width" constant="40" id="fiz-tg-WZH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <state key="normal" image="Empty Default Star"/>
+                                            <state key="selected" image="Yellow Selected Star"/>
+                                            <connections>
+                                                <action selector="saveBillButtonTapped:" destination="6ip-bB-xae" eventType="touchUpInside" id="sl5-Pq-fkA"/>
+                                            </connections>
+                                        </button>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h0R-Jw-qeC">
+                                            <rect key="frame" x="35" y="64.5" width="275" height="1"/>
+                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="9Ru-Vi-2TW"/>
+                                                <constraint firstAttribute="width" constant="275" id="Xhy-sb-ztd"/>
+                                            </constraints>
+                                        </progressView>
+                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lns-x3-5KG">
+                                            <rect key="frame" x="181" y="22.5" width="86" height="80"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="86" id="fQR-xn-yQ7"/>
+                                                <constraint firstAttribute="height" constant="80" id="zbs-lj-gDQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueC" translatesAutoresizingMaskIntoConstraints="NO" id="RxG-36-OeS" userLabel="Committee">
+                                            <rect key="frame" x="-8" y="25.5" width="100" height="95"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="gKb-BQ-D9S"/>
+                                                <constraint firstAttribute="height" constant="95" id="yQH-as-eLH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2t-MW-gRJ">
+                                            <rect key="frame" x="77" y="17.5" width="91" height="102"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="91" id="3dL-MQ-Cnx"/>
+                                                <constraint firstAttribute="height" constant="102" id="Fk6-MD-BCv"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aeq-0T-Wul">
+                                            <rect key="frame" x="244" y="15.5" width="109" height="99"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="109" id="WfA-SU-DlR"/>
+                                                <constraint firstAttribute="height" constant="99" id="bxL-j7-kXM"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Aeq-0T-Wul" firstAttribute="top" secondItem="Vwe-Y2-Si7" secondAttribute="bottom" constant="-12" id="8Vz-rE-yNq"/>
+                                        <constraint firstItem="Lns-x3-5KG" firstAttribute="leading" secondItem="c2t-MW-gRJ" secondAttribute="trailing" constant="13" id="ADB-TO-SLQ"/>
+                                        <constraint firstItem="Mod-Kr-2mR" firstAttribute="leading" secondItem="OSN-Iv-I4I" secondAttribute="leading" constant="10" id="HMd-kd-3Nf"/>
+                                        <constraint firstItem="c2t-MW-gRJ" firstAttribute="leading" secondItem="RxG-36-OeS" secondAttribute="trailing" constant="-15" id="LIi-3e-V89"/>
+                                        <constraint firstItem="L2Z-R2-AF6" firstAttribute="top" secondItem="OSN-Iv-I4I" secondAttribute="top" constant="8" id="NG9-Lt-YHX"/>
+                                        <constraint firstItem="Aeq-0T-Wul" firstAttribute="leading" secondItem="Lns-x3-5KG" secondAttribute="trailing" constant="-23" id="Sy9-zS-NEr"/>
+                                        <constraint firstItem="Yil-RH-cPQ" firstAttribute="leading" secondItem="OSN-Iv-I4I" secondAttribute="leading" constant="10" id="UVk-lP-bft"/>
+                                        <constraint firstItem="Vwe-Y2-Si7" firstAttribute="bottom" secondItem="RxG-36-OeS" secondAttribute="top" constant="2" id="W4D-8g-T5y"/>
+                                        <constraint firstAttribute="trailing" secondItem="L2Z-R2-AF6" secondAttribute="trailing" constant="5" id="acV-TT-3MQ"/>
+                                        <constraint firstItem="h0R-Jw-qeC" firstAttribute="top" secondItem="Vwe-Y2-Si7" secondAttribute="bottom" constant="37" id="aeZ-Vn-SpU"/>
+                                        <constraint firstItem="Mod-Kr-2mR" firstAttribute="top" secondItem="Yil-RH-cPQ" secondAttribute="bottom" constant="3" id="djq-dd-wUS"/>
+                                        <constraint firstItem="Lns-x3-5KG" firstAttribute="top" secondItem="Vwe-Y2-Si7" secondAttribute="bottom" constant="-5" id="eMo-1i-CTL"/>
+                                        <constraint firstItem="RxG-36-OeS" firstAttribute="leading" secondItem="OSN-Iv-I4I" secondAttribute="leading" constant="-8" id="hD3-jr-8q0"/>
+                                        <constraint firstItem="c2t-MW-gRJ" firstAttribute="top" secondItem="Vwe-Y2-Si7" secondAttribute="bottom" constant="-10" id="lgI-zE-tVk"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vwe-Y2-Si7" secondAttribute="trailing" constant="55" id="mZH-9F-znJ"/>
+                                        <constraint firstItem="h0R-Jw-qeC" firstAttribute="leading" secondItem="OSN-Iv-I4I" secondAttribute="leadingMargin" constant="15" id="mof-HX-VVk"/>
+                                        <constraint firstItem="Yil-RH-cPQ" firstAttribute="top" secondItem="OSN-Iv-I4I" secondAttribute="top" constant="8" id="mqe-5F-t8R"/>
+                                        <constraint firstItem="Vwe-Y2-Si7" firstAttribute="leading" secondItem="Yil-RH-cPQ" secondAttribute="trailing" constant="5" id="rSU-mf-sgx"/>
+                                        <constraint firstItem="Vwe-Y2-Si7" firstAttribute="top" secondItem="OSN-Iv-I4I" secondAttribute="top" constant="8" id="ui7-aF-dDh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="billNameLabel" destination="Vwe-Y2-Si7" id="E9D-Dy-ESe"/>
+                                    <outlet property="billNumberLabel" destination="Yil-RH-cPQ" id="iYG-pC-MwV"/>
+                                    <outlet property="billTypeLabel" destination="Mod-Kr-2mR" id="h82-6M-rZ8"/>
+                                    <outlet property="favoritedButton" destination="L2Z-R2-AF6" id="Ms0-Ub-IAh"/>
+                                    <outlet property="houseHeight" destination="Fk6-MD-BCv" id="XRY-i8-hMX"/>
+                                    <outlet property="houseImage" destination="c2t-MW-gRJ" id="pCp-uz-yOY"/>
+                                    <outlet property="houseTopBillNameBottom" destination="lgI-zE-tVk" id="VtX-6q-pMM"/>
+                                    <outlet property="houseWidth" destination="3dL-MQ-Cnx" id="7HP-5w-dEi"/>
+                                    <outlet property="presidentHeight" destination="bxL-j7-kXM" id="9k9-2c-AEQ"/>
+                                    <outlet property="presidentImage" destination="Aeq-0T-Wul" id="IUp-rn-184"/>
+                                    <outlet property="presidentTopBillNameBottom" destination="8Vz-rE-yNq" id="nUU-ph-RAS"/>
+                                    <outlet property="presidentWidth" destination="WfA-SU-DlR" id="V1U-fQ-Y59"/>
+                                    <outlet property="progressView" destination="h0R-Jw-qeC" id="vgc-dQ-jPm"/>
+                                    <outlet property="senateHeight" destination="zbs-lj-gDQ" id="OXR-91-815"/>
+                                    <outlet property="senateImage" destination="Lns-x3-5KG" id="1df-YS-9G3"/>
+                                    <outlet property="senateLeadingHouseTrailing" destination="ADB-TO-SLQ" id="V08-3m-eT6"/>
+                                    <outlet property="senateTopBillNameBottom" destination="eMo-1i-CTL" id="897-2g-8pW"/>
+                                    <outlet property="senateWidth" destination="fQR-xn-yQ7" id="zkz-lE-30L"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jl0-aO-3Vs" id="kPJ-Sk-jUC"/>
+                            <outlet property="delegate" destination="jl0-aO-3Vs" id="CCx-QO-Me9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvv-Qg-0ze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9562" y="-124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlueC" width="102" height="70"/>
+        <image name="Empty Default Star" width="419" height="384"/>
+        <image name="Yellow Selected Star" width="172.5" height="160"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
