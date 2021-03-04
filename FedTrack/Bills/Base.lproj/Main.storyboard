@@ -56,11 +56,11 @@
                                             </connections>
                                         </button>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-Rb-638">
-                                            <rect key="frame" x="35" y="64.5" width="275" height="1"/>
+                                            <rect key="frame" x="35" y="64.5" width="270" height="1"/>
                                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="LWb-12-PWo"/>
-                                                <constraint firstAttribute="width" constant="275" id="deq-fh-a8i"/>
+                                                <constraint firstAttribute="width" constant="270" id="deq-fh-a8i"/>
                                             </constraints>
                                         </progressView>
                                         <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jrr-Gt-keF">
@@ -71,7 +71,7 @@
                                                 <constraint firstAttribute="height" constant="80" id="qRI-fr-qUz"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueC" translatesAutoresizingMaskIntoConstraints="NO" id="ras-bb-LOq" userLabel="Committee">
+                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ras-bb-LOq" userLabel="Committee">
                                             <rect key="frame" x="-8" y="25.5" width="100" height="95"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -118,24 +118,28 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="billNameLabel" destination="ol0-Qt-4cx" id="hsJ-CR-RCb"/>
-                                    <outlet property="billNumberLabel" destination="a6N-gl-Q3K" id="hXL-cA-Usq"/>
-                                    <outlet property="billTypeLabel" destination="0BS-JT-iqj" id="RQs-Me-Yzt"/>
-                                    <outlet property="favoritedButton" destination="2qr-BH-QHR" id="PlO-Dh-53n"/>
-                                    <outlet property="houseHeight" destination="ZuL-kj-Jn9" id="TuZ-XQ-CGV"/>
-                                    <outlet property="houseImage" destination="GVB-Xl-sEJ" id="lhO-4T-Bpt"/>
-                                    <outlet property="houseTopBillNameBottom" destination="JfC-Dk-jA9" id="smv-0A-sWo"/>
-                                    <outlet property="houseWidth" destination="ZuL-kj-Jn9" id="e9x-KI-5Rz"/>
-                                    <outlet property="presidentHeight" destination="x8g-Qe-zCn" id="rJx-Q0-VgN"/>
-                                    <outlet property="presidentImage" destination="9Ud-Gv-1vO" id="oWq-EI-J7H"/>
-                                    <outlet property="presidentTopBillNameBottom" destination="R2O-TW-Cgb" id="wfz-Tp-tUO"/>
-                                    <outlet property="presidentWidth" destination="X9x-h2-G3i" id="zLS-Dv-qRo"/>
-                                    <outlet property="progressView" destination="4h3-Rb-638" id="8h9-l1-A9H"/>
-                                    <outlet property="senateHeight" destination="qRI-fr-qUz" id="wAt-XU-jDo"/>
-                                    <outlet property="senateImage" destination="Jrr-Gt-keF" id="4Bj-UP-AaG"/>
-                                    <outlet property="senateLeadingHouseTrailing" destination="Ujh-e5-zo0" id="QdH-aL-lP8"/>
-                                    <outlet property="senateTopBillNameBottom" destination="7Sy-wN-rO1" id="0rf-YR-zx7"/>
-                                    <outlet property="senateWidth" destination="kgS-Eh-UJT" id="II5-BU-1dz"/>
+                                    <outlet property="billNameLabel" destination="ol0-Qt-4cx" id="Obd-X2-HkK"/>
+                                    <outlet property="billNumberLabel" destination="a6N-gl-Q3K" id="Gyl-Gg-feg"/>
+                                    <outlet property="billTypeLabel" destination="0BS-JT-iqj" id="un6-J1-Ag7"/>
+                                    <outlet property="committeeHeight" destination="hT8-EM-6RO" id="ROJ-f5-JY4"/>
+                                    <outlet property="committeeImage" destination="ras-bb-LOq" id="lab-Ty-rn1"/>
+                                    <outlet property="committeeTopBillNameBottom" destination="wul-MR-grh" id="nfG-2v-G4Q"/>
+                                    <outlet property="committeeWidth" destination="ET6-eg-xrx" id="VZh-9I-N6C"/>
+                                    <outlet property="favoritedButton" destination="2qr-BH-QHR" id="eYd-Xa-iKE"/>
+                                    <outlet property="houseHeight" destination="Ndk-Oa-Ie7" id="Ium-K4-4cv"/>
+                                    <outlet property="houseImage" destination="GVB-Xl-sEJ" id="87J-C2-lLV"/>
+                                    <outlet property="houseTopBillNameBottom" destination="JfC-Dk-jA9" id="Oim-WD-c6F"/>
+                                    <outlet property="houseWidth" destination="ZuL-kj-Jn9" id="N2z-rI-fAg"/>
+                                    <outlet property="presidentHeight" destination="x8g-Qe-zCn" id="rm8-YJ-1fG"/>
+                                    <outlet property="presidentImage" destination="9Ud-Gv-1vO" id="7Ue-Cx-gNQ"/>
+                                    <outlet property="presidentTopBillNameBottom" destination="R2O-TW-Cgb" id="7gP-mf-ZK9"/>
+                                    <outlet property="presidentWidth" destination="X9x-h2-G3i" id="6cD-AL-gTM"/>
+                                    <outlet property="progressView" destination="4h3-Rb-638" id="3ta-eG-cbx"/>
+                                    <outlet property="senateHeight" destination="qRI-fr-qUz" id="Zfa-jC-SqB"/>
+                                    <outlet property="senateImage" destination="Jrr-Gt-keF" id="Ov2-A4-Frk"/>
+                                    <outlet property="senateLeadingHouseTrailing" destination="Ujh-e5-zo0" id="nuj-aV-u8d"/>
+                                    <outlet property="senateTopBillNameBottom" destination="7Sy-wN-rO1" id="lGA-I9-oCx"/>
+                                    <outlet property="senateWidth" destination="kgS-Eh-UJT" id="ytp-ZQ-GXy"/>
                                     <segue destination="DSN-Ve-4fG" kind="presentation" identifier="BillsToSpecificBill" id="psS-3d-UB3"/>
                                 </connections>
                             </tableViewCell>
@@ -209,21 +213,22 @@
                         <sections>
                             <tableViewSection id="8E7-ak-ajq">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="246" id="zYb-Rf-Apa">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="246"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zYb-Rf-Apa">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zYb-Rf-Apa" id="QC5-Qc-nls">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="246"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-2X-d4e">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-2X-d4e">
                                                     <rect key="frame" x="10" y="8" width="24" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bill Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OE-6q-snC">
-                                                    <rect key="frame" x="39" y="8" width="73" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bill Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OE-6q-snC">
+                                                    <rect key="frame" x="49" y="8" width="355" height="19.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -244,7 +249,7 @@
                                                         <constraint firstAttribute="height" constant="80" id="vaB-uj-LH6"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueC" translatesAutoresizingMaskIntoConstraints="NO" id="aVw-2S-8gn">
+                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aVw-2S-8gn">
                                                     <rect key="frame" x="-8" y="22.5" width="100" height="95"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -270,46 +275,51 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="i9e-Bh-irH" firstAttribute="top" secondItem="8OE-6q-snC" secondAttribute="bottom" constant="-11" id="1Ax-3S-36P"/>
+                                                <constraint firstAttribute="bottom" secondItem="B3m-DJ-5v2" secondAttribute="bottom" constant="12.5" id="8zx-Km-cBv"/>
                                                 <constraint firstItem="s6p-LA-P3m" firstAttribute="top" secondItem="8OE-6q-snC" secondAttribute="bottom" constant="35" id="92v-zJ-bCq"/>
                                                 <constraint firstItem="B3m-DJ-5v2" firstAttribute="top" secondItem="8OE-6q-snC" secondAttribute="bottom" constant="-12" id="FRm-Xc-HXX"/>
-                                                <constraint firstItem="m5h-2X-d4e" firstAttribute="leading" secondItem="QC5-Qc-nls" secondAttribute="leading" constant="10" id="GF4-AM-AX8"/>
-                                                <constraint firstItem="8OE-6q-snC" firstAttribute="leading" secondItem="m5h-2X-d4e" secondAttribute="trailing" constant="5" id="IId-fP-gVj"/>
                                                 <constraint firstItem="rHW-zM-wV4" firstAttribute="leading" secondItem="B3m-DJ-5v2" secondAttribute="trailing" constant="13" id="MF7-La-fgr"/>
                                                 <constraint firstItem="s6p-LA-P3m" firstAttribute="leading" secondItem="QC5-Qc-nls" secondAttribute="leadingMargin" constant="15" id="NL6-bJ-VfQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="i9e-Bh-irH" secondAttribute="bottom" constant="14.5" id="S4b-gW-559"/>
                                                 <constraint firstItem="B3m-DJ-5v2" firstAttribute="leading" secondItem="aVw-2S-8gn" secondAttribute="trailing" constant="-15" id="UXq-Sg-0ek"/>
                                                 <constraint firstItem="aVw-2S-8gn" firstAttribute="leading" secondItem="QC5-Qc-nls" secondAttribute="leading" constant="-8" id="VQs-68-Ds1"/>
                                                 <constraint firstItem="i9e-Bh-irH" firstAttribute="leading" secondItem="rHW-zM-wV4" secondAttribute="trailing" constant="-23" id="W0d-HO-Nb2"/>
                                                 <constraint firstItem="8OE-6q-snC" firstAttribute="top" secondItem="QC5-Qc-nls" secondAttribute="top" constant="8" id="f9D-GQ-uhu"/>
+                                                <constraint firstItem="m5h-2X-d4e" firstAttribute="leading" secondItem="QC5-Qc-nls" secondAttribute="leading" constant="10" id="fCZ-8N-ruS"/>
+                                                <constraint firstItem="8OE-6q-snC" firstAttribute="leading" secondItem="m5h-2X-d4e" secondAttribute="trailing" constant="15" id="fgp-yr-hSk"/>
                                                 <constraint firstItem="rHW-zM-wV4" firstAttribute="top" secondItem="8OE-6q-snC" secondAttribute="bottom" constant="-5" id="iVC-x4-6Zn"/>
+                                                <constraint firstAttribute="bottom" secondItem="aVw-2S-8gn" secondAttribute="bottom" constant="12.5" id="kuh-tT-VQX"/>
                                                 <constraint firstItem="8OE-6q-snC" firstAttribute="bottom" secondItem="aVw-2S-8gn" secondAttribute="top" constant="5" id="mYM-gf-WMo"/>
-                                                <constraint firstAttribute="trailing" secondItem="8OE-6q-snC" secondAttribute="trailing" constant="5" id="sBp-gz-e4t"/>
+                                                <constraint firstAttribute="bottom" secondItem="rHW-zM-wV4" secondAttribute="bottom" constant="27.5" id="ob2-OP-YZF"/>
                                                 <constraint firstItem="m5h-2X-d4e" firstAttribute="top" secondItem="QC5-Qc-nls" secondAttribute="top" constant="8" id="tmO-rt-MkY"/>
+                                                <constraint firstAttribute="trailing" secondItem="8OE-6q-snC" secondAttribute="trailing" constant="10" id="uqC-EP-TSs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="Kil-Mf-VXM">
-                                        <rect key="frame" x="0.0" y="274" width="414" height="52"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Kil-Mf-VXM">
+                                        <rect key="frame" x="0.0" y="149" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kil-Mf-VXM" id="T4U-at-2eb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary N/A" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJW-ao-HWz">
-                                                    <rect key="frame" x="20" y="11" width="374" height="20.5"/>
+                                                    <rect key="frame" x="20" y="16" width="374" height="23"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                     <color key="textColor" red="0.030588235290000002" green="0.030588235290000002" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="dJW-ao-HWz" secondAttribute="bottom" constant="5" id="K8A-uc-0fe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dJW-ao-HWz" secondAttribute="trailing" id="PNs-0G-Y9H"/>
                                                 <constraint firstItem="dJW-ao-HWz" firstAttribute="leading" secondItem="T4U-at-2eb" secondAttribute="leadingMargin" id="SuZ-kk-Akx"/>
-                                                <constraint firstItem="dJW-ao-HWz" firstAttribute="top" secondItem="T4U-at-2eb" secondAttribute="topMargin" id="V5p-tD-DPy"/>
+                                                <constraint firstItem="dJW-ao-HWz" firstAttribute="top" secondItem="T4U-at-2eb" secondAttribute="topMargin" constant="5" id="V5p-tD-DPy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="171" id="K9g-ah-kzT">
-                                        <rect key="frame" x="0.0" y="326" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="201" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9g-ah-kzT" id="apT-kp-k7o">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -362,7 +372,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MPw-KH-4ks">
-                                        <rect key="frame" x="0.0" y="497" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="372" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MPw-KH-4ks" id="PFO-Fk-ftD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -387,31 +397,36 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="billInfoHouseHeight" destination="87S-09-xbc" id="aXH-PQ-ngQ"/>
-                        <outlet property="billInfoHouseImage" destination="B3m-DJ-5v2" id="bPZ-Ib-Tmf"/>
-                        <outlet property="billInfoHouseTopBillNameBottom" destination="FRm-Xc-HXX" id="wV5-iZ-OGN"/>
-                        <outlet property="billInfoHouseWidth" destination="tQs-fc-w6Y" id="bAd-ub-Xde"/>
-                        <outlet property="billInfoNameLabel" destination="8OE-6q-snC" id="mnN-H4-XXn"/>
-                        <outlet property="billInfoNumberLabel" destination="m5h-2X-d4e" id="Fq1-jz-ZIb"/>
-                        <outlet property="billInfoPresidentHeight" destination="hOw-DT-UeH" id="UP8-aD-GC0"/>
-                        <outlet property="billInfoPresidentImage" destination="i9e-Bh-irH" id="1oF-qb-v9H"/>
-                        <outlet property="billInfoPresidentTopBillNameBottom" destination="1Ax-3S-36P" id="7CV-4P-YEf"/>
-                        <outlet property="billInfoPresidentWidth" destination="Wz6-jb-2Ek" id="D1K-gN-wDy"/>
-                        <outlet property="billInfoProgressView" destination="s6p-LA-P3m" id="sLb-bw-H4Q"/>
-                        <outlet property="billInfoSenateHeight" destination="vaB-uj-LH6" id="MnP-Pm-bRn"/>
-                        <outlet property="billInfoSenateImage" destination="rHW-zM-wV4" id="9IR-VL-NZy"/>
-                        <outlet property="billInfoSenateTopBillNameBottom" destination="iVC-x4-6Zn" id="VLp-j6-xK7"/>
-                        <outlet property="billInfoSenateWidth" destination="lae-3r-Hvr" id="CrP-XM-mhx"/>
-                        <outlet property="billInfoSummaryLabel" destination="dJW-ao-HWz" id="LlW-xV-UhK"/>
-                        <outlet property="latestActionDateLabel" destination="gAw-0b-9uh" id="wIR-wq-7WH"/>
-                        <outlet property="latestActionLabel" destination="kjC-86-OKs" id="5N2-zg-yW6"/>
-                        <outlet property="sponsorNameLabel" destination="aTb-53-eBv" id="iIQ-eh-ImW"/>
-                        <outlet property="sponsorTitleLabel" destination="lKT-Yr-feH" id="VBV-Js-AaF"/>
+                        <outlet property="committeeHeight" destination="RRT-u7-iZA" id="JOI-ye-Hxp"/>
+                        <outlet property="committeeImage" destination="aVw-2S-8gn" id="SRl-Bp-Ypc"/>
+                        <outlet property="committeeTopBillNameBottom" destination="mYM-gf-WMo" id="qpq-p2-SNa"/>
+                        <outlet property="committeeWidth" destination="izI-Gs-kZg" id="2VC-E1-2BK"/>
+                        <outlet property="houseHeight" destination="87S-09-xbc" id="UeM-ND-6aC"/>
+                        <outlet property="houseImage" destination="B3m-DJ-5v2" id="UcL-J2-56b"/>
+                        <outlet property="houseTopBillNameBottom" destination="FRm-Xc-HXX" id="Bss-h1-TG1"/>
+                        <outlet property="houseWidth" destination="tQs-fc-w6Y" id="oO0-U8-zHA"/>
+                        <outlet property="latestActionDateLabel" destination="gAw-0b-9uh" id="Uax-u1-hck"/>
+                        <outlet property="latestActionLabel" destination="kjC-86-OKs" id="6cZ-cp-aGX"/>
+                        <outlet property="nameLabel" destination="8OE-6q-snC" id="Qhb-Zf-fdk"/>
+                        <outlet property="numberLabel" destination="m5h-2X-d4e" id="d8B-75-WVF"/>
+                        <outlet property="presidentHeight" destination="hOw-DT-UeH" id="wgY-ia-0GE"/>
+                        <outlet property="presidentImage" destination="i9e-Bh-irH" id="dB8-59-9tB"/>
+                        <outlet property="presidentTopBillNameBottom" destination="1Ax-3S-36P" id="j5M-sc-iLW"/>
+                        <outlet property="presidentWidth" destination="Wz6-jb-2Ek" id="b1T-vV-Eg6"/>
+                        <outlet property="progressView" destination="s6p-LA-P3m" id="eTK-ra-VMh"/>
+                        <outlet property="senateHeight" destination="vaB-uj-LH6" id="5Iz-wr-oIU"/>
+                        <outlet property="senateImage" destination="rHW-zM-wV4" id="wmI-Qo-ISr"/>
+                        <outlet property="senateLeadingHouseTrailing" destination="MF7-La-fgr" id="LGP-gW-Z5C"/>
+                        <outlet property="senateTopBillNameBottom" destination="iVC-x4-6Zn" id="nL3-uj-rtb"/>
+                        <outlet property="senateWidth" destination="lae-3r-Hvr" id="M0B-eq-iIZ"/>
+                        <outlet property="sponsorNameLabel" destination="aTb-53-eBv" id="h3k-8c-5A3"/>
+                        <outlet property="sponsorTitleLabel" destination="lKT-Yr-feH" id="aag-hL-OiL"/>
+                        <outlet property="summaryLabel" destination="dJW-ao-HWz" id="tes-Eo-kf6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5e-97-c9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8091" y="-137"/>
+            <point key="canvasLocation" x="8089.8550724637689" y="-137.27678571428569"/>
         </scene>
         <!--Bills-->
         <scene sceneID="MRI-j5-Jfx">
@@ -443,9 +458,8 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="BlueC" width="102" height="70"/>
         <image name="Empty Default Star" width="419" height="384"/>
-        <image name="Filter Image" width="62" height="58"/>
+        <image name="Filter Image" width="31" height="29"/>
         <image name="Yellow Selected Star" width="172.5" height="160"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

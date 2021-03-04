@@ -9,28 +9,38 @@ import UIKit
 
 class BillInfoTableViewController: UITableViewController {
     
-    @IBOutlet weak var billInfoNumberLabel: UILabel!
-    @IBOutlet weak var billInfoNameLabel: UILabel!
-    @IBOutlet weak var billInfoSummaryLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
     
-    @IBOutlet weak var billInfoHouseImage: UIImageView!
-    @IBOutlet weak var billInfoSenateImage: UIImageView!
-    @IBOutlet weak var billInfoPresidentImage: UIImageView!
-    @IBOutlet weak var billInfoProgressView: UIProgressView!
+    @IBOutlet weak var committeeImage: UIImageView!
+    @IBOutlet weak var committeeWidth: NSLayoutConstraint!
+    @IBOutlet weak var committeeHeight: NSLayoutConstraint!
+    @IBOutlet weak var committeeTopBillNameBottom: NSLayoutConstraint!
+    
+    @IBOutlet weak var houseImage: UIImageView!
+    @IBOutlet weak var houseWidth: NSLayoutConstraint!
+    @IBOutlet weak var houseHeight: NSLayoutConstraint!
+    @IBOutlet weak var houseTopBillNameBottom: NSLayoutConstraint!
+    
+    @IBOutlet weak var senateImage: UIImageView!
+    @IBOutlet weak var senateWidth: NSLayoutConstraint!
+    @IBOutlet weak var senateHeight: NSLayoutConstraint!
+    @IBOutlet weak var senateTopBillNameBottom: NSLayoutConstraint!
+    @IBOutlet weak var senateLeadingHouseTrailing: NSLayoutConstraint!
+    
+    @IBOutlet weak var presidentImage: UIImageView!
+    @IBOutlet weak var presidentWidth: NSLayoutConstraint!
+    @IBOutlet weak var presidentHeight: NSLayoutConstraint!
+    @IBOutlet weak var presidentTopBillNameBottom: NSLayoutConstraint!
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    
     @IBOutlet weak var latestActionDateLabel: UILabel!
     @IBOutlet weak var latestActionLabel: UILabel!
     @IBOutlet weak var sponsorTitleLabel: UILabel!
     @IBOutlet weak var sponsorNameLabel: UILabel!
-    
-    @IBOutlet weak var billInfoHouseHeight: NSLayoutConstraint!
-    @IBOutlet weak var billInfoHouseWidth: NSLayoutConstraint!
-    @IBOutlet weak var billInfoSenateWidth: NSLayoutConstraint!
-    @IBOutlet weak var billInfoSenateHeight: NSLayoutConstraint!
-    @IBOutlet weak var billInfoPresidentWidth: NSLayoutConstraint!
-    @IBOutlet weak var billInfoPresidentHeight: NSLayoutConstraint!
-    @IBOutlet weak var billInfoHouseTopBillNameBottom: NSLayoutConstraint!
-    @IBOutlet weak var billInfoSenateTopBillNameBottom: NSLayoutConstraint!
-    @IBOutlet weak var billInfoPresidentTopBillNameBottom: NSLayoutConstraint!
     
     var billInfo: Bill?
     
@@ -38,16 +48,16 @@ class BillInfoTableViewController: UITableViewController {
         super.viewDidLoad()
         
         if let billInfo = billInfo {
-            billInfoNumberLabel?.text = "\(billInfo.number)"
-            billInfoNameLabel?.text = "\(billInfo.shortTitle)"
-            billInfoSummaryLabel?.text = "\(billInfo.summary)"
+            numberLabel?.text = "\(billInfo.number)"
+            nameLabel?.text = "\(billInfo.shortTitle)"
+           summaryLabel?.text = "\(billInfo.summary)"
             latestActionDateLabel?.text = "\(billInfo.latestActionDate)"
             latestActionLabel?.text = "\(billInfo.latestAction)"
             sponsorTitleLabel?.text = "\(billInfo.sponsorTitle)"
             sponsorNameLabel?.text = "\(billInfo.sponsorName)"
             
             if billInfo.summary.isEmpty {
-                billInfoSummaryLabel?.text = "Summary N/A"
+                summaryLabel?.text = "Summary N/A"
             }
         }
         updateImage(bill: billInfo!)
@@ -55,41 +65,55 @@ class BillInfoTableViewController: UITableViewController {
     
     func updateImage(bill: Bill) {
         
-        if let house = bill.house  {
-            billInfoHouseImage.image = UIImage(named: "BlueHouse")
-            billInfoHouseWidth.constant = 85
-            billInfoHouseHeight.constant = 87
-            billInfoHouseTopBillNameBottom.constant = 1
+        if case let bill.committee = true {
+            committeeImage.image = UIImage(named: "BlueC")
+            committeeWidth.constant = 97
+            committeeHeight.constant = 97
+            committeeTopBillNameBottom.constant = 5
             
         } else {
-            billInfoHouseImage.image = UIImage(named: "GreyHouse")
-            billInfoHouseWidth.constant = 93
-            billInfoHouseHeight.constant = 103
+            committeeImage.image = UIImage(named: "GreyC")
+            committeeWidth.constant = 86
+            committeeHeight.constant = 91
+            committeeTopBillNameBottom.constant = 5
+        }
+        
+        
+        if let house = bill.house  {
+            houseImage.image = UIImage(named: "BlueHouse")
+            houseWidth.constant = 85
+            houseHeight.constant = 87
+            houseTopBillNameBottom.constant = 1
+            
+        } else {
+            houseImage.image = UIImage(named: "GreyHouse")
+            houseWidth.constant = 93
+           houseHeight.constant = 103
         }
         
         if let senate = bill.senate  {
-            billInfoSenateImage.image = UIImage(named: "BlueSenate")
-            billInfoSenateWidth.constant = 103
-            billInfoSenateHeight.constant = 118
-            billInfoSenateTopBillNameBottom.constant = -17
+            senateImage.image = UIImage(named: "BlueSenate")
+            senateWidth.constant = 103
+            senateHeight.constant = 118
+            senateTopBillNameBottom.constant = -17
             
         } else {
-            billInfoSenateImage.image = UIImage(named: "GreySenate")
-            billInfoSenateWidth.constant = 86
-            billInfoSenateHeight.constant = 80
-            billInfoSenateTopBillNameBottom.constant = -5
+            senateImage.image = UIImage(named: "GreySenate")
+            senateWidth.constant = 86
+            senateHeight.constant = 80
+            senateTopBillNameBottom.constant = -5
         }
         
         if let enacted = bill.enacted  {
-            billInfoPresidentImage.image = UIImage(named: "BluePresident")
-            billInfoPresidentWidth.constant = 117
-            billInfoPresidentHeight.constant = 117
-            billInfoPresidentTopBillNameBottom.constant = -19
+            presidentImage.image = UIImage(named: "BluePresident")
+            presidentWidth.constant = 117
+            presidentHeight.constant = 117
+            presidentTopBillNameBottom.constant = -19
             
         } else {
-            billInfoPresidentImage.image = UIImage(named: "GreyPresident")
-            billInfoPresidentWidth.constant = 109
-            billInfoPresidentHeight.constant = 99
+            presidentImage.image = UIImage(named: "GreyPresident")
+            presidentWidth.constant = 109
+            presidentHeight.constant = 99
         }
     }
 }

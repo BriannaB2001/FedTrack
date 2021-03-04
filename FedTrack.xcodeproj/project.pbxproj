@@ -88,6 +88,7 @@
 			children = (
 				DA04873925CC7226003920C0 /* AppDelegate.swift */,
 				DA04873B25CC7226003920C0 /* SceneDelegate.swift */,
+				DA04874725CC7229003920C0 /* Info.plist */,
 				DA57C91F25EED66B00F903BD /* Laws */,
 				DA57C90A25EEB25000F903BD /* API Data */,
 				DA57C90925EEB1E700F903BD /* Login and SignUp */,
@@ -145,7 +146,6 @@
 			children = (
 				DA04874225CC7229003920C0 /* Assets.xcassets */,
 				DA04874425CC7229003920C0 /* LaunchScreen.storyboard */,
-				DA04874725CC7229003920C0 /* Info.plist */,
 			);
 			path = Misc;
 			sourceTree = "<group>";

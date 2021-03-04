@@ -15,21 +15,28 @@ class BillsTableViewCell: UITableViewCell {
     @IBOutlet weak var billNameLabel: UILabel!
     @IBOutlet weak var billTypeLabel: UILabel!
     
-    @IBOutlet weak var houseImage: UIImageView!
-    @IBOutlet weak var senateImage: UIImageView!
-    @IBOutlet weak var presidentImage: UIImageView!
-    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var committeeImage: UIImageView!
+    @IBOutlet weak var committeeWidth: NSLayoutConstraint!
+    @IBOutlet weak var committeeHeight: NSLayoutConstraint!
+    @IBOutlet weak var committeeTopBillNameBottom: NSLayoutConstraint!
     
+    @IBOutlet weak var houseImage: UIImageView!
     @IBOutlet weak var houseWidth: NSLayoutConstraint!
     @IBOutlet weak var houseHeight: NSLayoutConstraint!
     @IBOutlet weak var houseTopBillNameBottom: NSLayoutConstraint!
+    
+    @IBOutlet weak var senateImage: UIImageView!
     @IBOutlet weak var senateWidth: NSLayoutConstraint!
     @IBOutlet weak var senateHeight: NSLayoutConstraint!
     @IBOutlet weak var senateTopBillNameBottom: NSLayoutConstraint!
     @IBOutlet weak var senateLeadingHouseTrailing: NSLayoutConstraint!
+    
+    @IBOutlet weak var presidentImage: UIImageView!
     @IBOutlet weak var presidentWidth: NSLayoutConstraint!
     @IBOutlet weak var presidentHeight: NSLayoutConstraint!
     @IBOutlet weak var presidentTopBillNameBottom: NSLayoutConstraint!
+    
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var favoritedButton: UIButton!
     
     override func awakeFromNib() {
@@ -46,23 +53,36 @@ class BillsTableViewCell: UITableViewCell {
     
     func updateImage(bill: Bill) {
         
+        if case let bill.committee = true {
+            committeeImage.image = UIImage(named: "BlueC")
+            committeeWidth.constant = 97
+            committeeHeight.constant = 97
+            committeeTopBillNameBottom.constant = 5
+            
+        } else {
+            committeeImage.image = UIImage(named: "GreyC")
+            committeeWidth.constant = 86
+            committeeHeight.constant = 91
+            committeeTopBillNameBottom.constant = 5
+        }
+        
         if let house = bill.house  {
             houseImage.image = UIImage(named: "BlueHouse")
-            houseWidth.constant = 80
-            houseHeight.constant = 87
-            houseTopBillNameBottom.constant = -4
+            houseWidth.constant = 85
+            houseHeight.constant = 90
+            houseTopBillNameBottom.constant = 1
             
         } else {
             houseImage.image = UIImage(named: "GreyHouse")
-            houseWidth.constant = 86
-            houseHeight.constant = 93
-            houseTopBillNameBottom.constant = -10
+            houseWidth.constant = 88
+            houseHeight.constant = 95
+            houseTopBillNameBottom.constant = -8
         }
         
         if let senate = bill.senate  {
             senateImage.image = UIImage(named: "BlueSenate")
-            senateWidth.constant = 105
-            senateHeight.constant = 110
+            senateWidth.constant = 102
+            senateHeight.constant = 106
             senateTopBillNameBottom.constant = -10
             senateLeadingHouseTrailing.constant = 0
             
