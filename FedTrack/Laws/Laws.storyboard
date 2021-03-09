@@ -121,20 +121,6 @@
                                     <outlet property="billNumberLabel" destination="Yil-RH-cPQ" id="iYG-pC-MwV"/>
                                     <outlet property="billTypeLabel" destination="Mod-Kr-2mR" id="h82-6M-rZ8"/>
                                     <outlet property="favoritedButton" destination="L2Z-R2-AF6" id="Ms0-Ub-IAh"/>
-                                    <outlet property="houseHeight" destination="Fk6-MD-BCv" id="XRY-i8-hMX"/>
-                                    <outlet property="houseImage" destination="c2t-MW-gRJ" id="pCp-uz-yOY"/>
-                                    <outlet property="houseTopBillNameBottom" destination="lgI-zE-tVk" id="VtX-6q-pMM"/>
-                                    <outlet property="houseWidth" destination="3dL-MQ-Cnx" id="7HP-5w-dEi"/>
-                                    <outlet property="presidentHeight" destination="bxL-j7-kXM" id="9k9-2c-AEQ"/>
-                                    <outlet property="presidentImage" destination="Aeq-0T-Wul" id="IUp-rn-184"/>
-                                    <outlet property="presidentTopBillNameBottom" destination="8Vz-rE-yNq" id="nUU-ph-RAS"/>
-                                    <outlet property="presidentWidth" destination="WfA-SU-DlR" id="V1U-fQ-Y59"/>
-                                    <outlet property="progressView" destination="h0R-Jw-qeC" id="vgc-dQ-jPm"/>
-                                    <outlet property="senateHeight" destination="zbs-lj-gDQ" id="OXR-91-815"/>
-                                    <outlet property="senateImage" destination="Lns-x3-5KG" id="1df-YS-9G3"/>
-                                    <outlet property="senateLeadingHouseTrailing" destination="ADB-TO-SLQ" id="V08-3m-eT6"/>
-                                    <outlet property="senateTopBillNameBottom" destination="eMo-1i-CTL" id="897-2g-8pW"/>
-                                    <outlet property="senateWidth" destination="fQR-xn-yQ7" id="zkz-lE-30L"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

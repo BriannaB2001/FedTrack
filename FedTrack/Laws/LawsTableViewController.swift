@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class LawsTableViewController: UITableViewController {
     
@@ -47,7 +48,11 @@ class LawsTableViewController: UITableViewController {
         
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)
-        cell.updateImage(bill: bill)
+        
+        let congressView = UIHostingController(rootView:         ContentView(committee: true, house: true, senate: true, enacted: false))
+        cell.contentView.translatesAutoresizingMaskIntoConstraints = false
+        congressView.view.frame = cell.contentView.bounds
+        cell.contentView.addSubview(congressView.view)
         
         return cell
     }

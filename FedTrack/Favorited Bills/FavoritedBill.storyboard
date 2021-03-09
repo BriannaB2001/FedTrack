@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JVC-OH-y18">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -10,7 +10,7 @@
         <!--Favorited Bill Table View Controller-->
         <scene sceneID="q83-JB-5rc">
             <objects>
-                <tableViewController id="JVC-OH-y18" customClass="FavoritedBillTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Favorites" id="JVC-OH-y18" customClass="FavoritedBillTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xgg-xH-QgY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,20 +120,6 @@
                                     <outlet property="billNameLabel" destination="eZs-9V-I5E" id="MnK-rc-Hlt"/>
                                     <outlet property="billTypeLabel" destination="YoA-3C-oOK" id="o7B-20-26w"/>
                                     <outlet property="favoritedBillNumberLabel" destination="pKa-fT-lVJ" id="9IL-Op-Qbs"/>
-                                    <outlet property="houseHeight" destination="VB0-bz-pbQ" id="JUV-vS-mmI"/>
-                                    <outlet property="houseImage" destination="Zhg-a2-9yN" id="Uk3-f5-J6U"/>
-                                    <outlet property="houseTopBillNameBottom" destination="XwI-1W-uuq" id="84t-oH-MD2"/>
-                                    <outlet property="houseWidth" destination="hcl-s7-Toz" id="fCp-xK-AHA"/>
-                                    <outlet property="presidentHeight" destination="I3p-2O-8R1" id="TGq-Ew-zY8"/>
-                                    <outlet property="presidentImage" destination="oM0-PL-h8k" id="6Ih-PV-4kg"/>
-                                    <outlet property="presidentTopBillNameBottom" destination="fEs-nd-U1y" id="iRi-ye-zlH"/>
-                                    <outlet property="presidentWidth" destination="efF-5z-dnd" id="Ebx-Nm-e0E"/>
-                                    <outlet property="progressView" destination="zTd-8Z-jb7" id="Vru-wI-k7R"/>
-                                    <outlet property="senateHeight" destination="GaO-zE-lyk" id="kCp-LN-Qmq"/>
-                                    <outlet property="senateImage" destination="Esy-Ma-G1h" id="hAG-PE-N72"/>
-                                    <outlet property="senateLeadingHouseTrailing" destination="Pbe-wY-CMk" id="OX2-uW-dSM"/>
-                                    <outlet property="senateTopBillNameBottom" destination="lrx-qN-Twa" id="zSe-tU-ZsK"/>
-                                    <outlet property="senateWidth" destination="3IM-2n-PVv" id="8zK-oc-ndR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

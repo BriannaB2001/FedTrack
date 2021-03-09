@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class BillsTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate, SubjectChosen {
     
@@ -32,6 +33,7 @@ class BillsTableViewController: UITableViewController, UIPopoverPresentationCont
                 self.tableView.reloadData()
             }
         }
+        
     }
     
     // Mark: - Subject Chosen Delegate
@@ -59,7 +61,11 @@ class BillsTableViewController: UITableViewController, UIPopoverPresentationCont
         
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)
-        cell.updateImage(bill: bill)
+        
+        let congressView = UIHostingController(rootView: ContentView(committee: true, house: true, senate: true, enacted: false))
+        cell.contentView.translatesAutoresizingMaskIntoConstraints = false
+        congressView.view.frame = cell.contentView.bounds
+        cell.contentView.addSubview(congressView.view)
         
         return cell
     }
