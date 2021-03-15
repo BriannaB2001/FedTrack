@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -133,6 +134,14 @@
                             <outlet property="delegate" destination="dfP-nv-6o1" id="CyC-Au-2H0"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Bills" id="1dx-xR-jSK">
+                        <imageReference key="image" image="flag.fill" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" systemColor="systemGrayColor"/>
+                        <imageReference key="selectedImage" image="flag.fill" catalog="system" symbolScale="large"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Bills" leftItemsSupplementBackButton="YES" id="ika-qk-eek">
                         <barButtonItem key="rightBarButtonItem" image="Filter Image" id="jqo-hz-agp">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -407,14 +416,12 @@
             </objects>
             <point key="canvasLocation" x="8089.8550724637689" y="-137.27678571428569"/>
         </scene>
-        <!--Bills-->
+        <!--Navigation Controller-->
         <scene sceneID="Jh4-9i-Kyp">
             <objects>
                 <navigationController storyboardIdentifier="Bills" automaticallyAdjustsScrollViewInsets="NO" id="2eS-oF-V1O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bills" image="flag.fill" catalog="system" id="Szc-wi-Rfv">
-                        <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="WXy-HU-6xP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -442,6 +449,9 @@
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

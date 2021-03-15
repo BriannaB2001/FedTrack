@@ -13,14 +13,14 @@ struct DividerView: View {
     var body: some View {
         VStack {
             Divider()
-                .frame(width: 50, height: 5, alignment: .center)
                 .background(colorForView)
-                
         }
     }
 }
 
 struct ContentView: View {
+    
+//    var bills = Bill
     
     let committee: Bool
     var house: Bool
@@ -42,7 +42,21 @@ struct ContentView: View {
     
     var body: some View {
         
-        
+        VStack {
+            
+//        HStack {
+//            Text (bills.number)
+//            Spacer()
+//            Text (bills.shortTitle)
+//            Spacer()
+//            Button (Image(systemName: "star.fill"))
+//        }
+//            Spacer()
+//
+//            Text (bills.primarySubject)
+            
+//        Spacer()
+            
         HStack(spacing: 0) {
                 Image(systemName: "c.circle.fill")
                     .resizable()
@@ -64,6 +78,7 @@ struct ContentView: View {
                     .scaledToFit()
                     .foregroundColor(enactedButtonColor)
         }
+    }
     }
 }
 

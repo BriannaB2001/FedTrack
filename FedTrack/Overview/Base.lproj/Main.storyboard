@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m9E-Z3-TNG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EBu-T5-fcI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +49,7 @@
                                                 <constraint firstAttribute="width" constant="40" id="KZL-yB-SaM"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                            <state key="normal" image="Empty Default Star"/>
+                                            <state key="normal" image="star"/>
                                             <state key="selected" image="Yellow Selected Star"/>
                                         </button>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6av-X6-t0W">
@@ -120,42 +121,57 @@
                             <outlet property="delegate" destination="z3X-3k-3gy" id="fX0-8P-fYT"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Overview" image="clock.fill" catalog="system" selectedImage="clock.fill" id="QMf-I2-OQV">
+                        <color key="badgeColor" systemColor="systemGrayColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Overview" id="7pp-84-JVc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaa-F9-NEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388.4057971014495" y="110.49107142857143"/>
+            <point key="canvasLocation" x="-525" y="110"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="OlS-V5-hTR">
+        <!--Overview-->
+        <scene sceneID="vTR-Dc-Uni">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m9E-Z3-TNG" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EBu-T5-fcI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Overview" image="clock.fill" catalog="system" id="i3M-vr-fnP">
+                        <color key="badgeColor" systemColor="systemGrayColor"/>
+                        <imageReference key="selectedImage" image="clock.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pQm-Rh-2qq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8x7-7M-2uf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="z3X-3k-3gy" kind="relationship" relationship="rootViewController" id="EBG-wH-O4D"/>
+                        <segue destination="z3X-3k-3gy" kind="relationship" relationship="rootViewController" id="fZQ-yA-ZXJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bFu-az-IgW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rk3-YU-RaX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2298.5507246376815" y="110.49107142857143"/>
+            <point key="canvasLocation" x="-1312" y="110"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Empty Default Star" width="419" height="384"/>
         <image name="Yellow Selected Star" width="172.5" height="160"/>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="star" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -14,6 +14,13 @@ class FavoritedBillTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AllBillsURLController.fetchBillsItems { (bills) in
+            DispatchQueue.main.async {
+                self.allBills = bills ?? []
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -28,12 +35,12 @@ class FavoritedBillTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteBillCell", for: indexPath) as! BillsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteBillCell", for: indexPath) as! FavoritedBillTableViewCell
         
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)
         
-        let congressView = UIHostingController(rootView:         ContentView(committee: true, house: true, senate: true, enacted: false))
+        let congressView = UIHostingController(rootView: ContentView(committee: bill.committee, house: (bill.house != nil), senate: (bill.senate != nil), enacted: (bill.enacted != nil)))
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
         congressView.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(congressView.view)

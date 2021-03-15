@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,10 +12,11 @@
         <scene sceneID="URj-Yd-vII">
             <objects>
                 <tabBarController id="4Be-dZ-yck" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pJa-ol-u4l">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pJa-ol-u4l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" name="NavyBlue"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="ZlL-lz-GfO" kind="relationship" relationship="viewControllers" id="GHF-cY-yDm"/>
@@ -30,7 +32,9 @@
         <scene sceneID="7Qr-bN-8hw">
             <objects>
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Overview" id="ZlL-lz-GfO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="pencil" catalog="system" id="Z3R-cC-hvz"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="pencil" catalog="system" id="Z3R-cC-hvz">
+                        <color key="badgeColor" systemColor="systemGrayColor"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zM-nD-Yqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,7 +44,9 @@
         <scene sceneID="AGF-s0-cb6">
             <objects>
                 <viewControllerPlaceholder storyboardName="Bills" referencedIdentifier="Bills" id="SDw-Cd-Xfj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="flag.fill" catalog="system" id="Mng-Ce-pzb"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="flag.fill" catalog="system" id="Mng-Ce-pzb">
+                        <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAu-mm-jJk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,7 +56,9 @@
         <scene sceneID="mCR-JA-owf">
             <objects>
                 <viewControllerPlaceholder storyboardName="FavoritedBill" referencedIdentifier="Favorites" id="Bsp-1Z-Xbt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="star.fill" catalog="system" id="gOw-v7-7rn"/>
+                    <tabBarItem key="tabBarItem" title="Favorited" image="star.fill" catalog="system" selectedImage="star.fill" id="gOw-v7-7rn">
+                        <color key="badgeColor" name="Grey"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJh-QS-PNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,8 +69,14 @@
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Grey">
+            <color red="0.88599997758865356" green="0.88599997758865356" blue="0.88599997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavyBlue">
+            <color red="0.078000001609325409" green="0.078000001609325409" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

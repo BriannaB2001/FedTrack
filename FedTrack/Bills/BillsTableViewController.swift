@@ -17,7 +17,7 @@ class BillsTableViewController: UITableViewController, UIPopoverPresentationCont
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "PopOverTableViewController") as! PopOverTableViewController
         vc.subjectDelegate = self
-        vc.allBills = allBills
+//        vc.allBills = allBills
             vc.modalPresentationStyle = .popover
             let popover: UIPopoverPresentationController = vc.popoverPresentationController!
             popover.barButtonItem = sender
@@ -62,7 +62,7 @@ class BillsTableViewController: UITableViewController, UIPopoverPresentationCont
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)
         
-        let congressView = UIHostingController(rootView: ContentView(committee: true, house: true, senate: true, enacted: false))
+        let congressView = UIHostingController(rootView: ContentView(committee: bill.committee, house: (bill.house != nil), senate: (bill.senate != nil), enacted: (bill.enacted != nil)))
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
         congressView.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(congressView.view)

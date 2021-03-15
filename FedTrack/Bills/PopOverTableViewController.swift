@@ -17,6 +17,14 @@ class PopOverTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AllBillsURLController.fetchBillsItems { (bills) in
+            DispatchQueue.main.async {
+                self.allBills = bills ?? []
+                self.tableView.reloadData()
+            }
+        }
+        
     }
     
     // MARK: - Table view data source
