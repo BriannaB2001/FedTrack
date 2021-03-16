@@ -347,12 +347,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYo-hF-cas">
+                                                    <rect key="frame" x="250" y="67" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dJN-fY-lSA" firstAttribute="top" secondItem="ROD-fp-PXs" secondAttribute="bottom" constant="8.5" id="HqE-92-pa0"/>
                                                 <constraint firstItem="B7U-BO-uNn" firstAttribute="top" secondItem="55u-ha-Vev" secondAttribute="top" constant="11" id="JLb-zj-Gec"/>
                                                 <constraint firstItem="B7U-BO-uNn" firstAttribute="leading" secondItem="AUD-we-R2I" secondAttribute="trailing" constant="5" id="Qkv-r8-nuQ"/>
                                                 <constraint firstItem="ROD-fp-PXs" firstAttribute="leading" secondItem="55u-ha-Vev" secondAttribute="leadingMargin" id="ZtM-6k-8aJ"/>
+                                                <constraint firstItem="LYo-hF-cas" firstAttribute="leading" secondItem="iq1-vM-GAd" secondAttribute="trailing" id="aTv-aT-tIF"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ROD-fp-PXs" secondAttribute="trailing" id="lT6-XU-hlt"/>
                                                 <constraint firstItem="dJN-fY-lSA" firstAttribute="leading" secondItem="55u-ha-Vev" secondAttribute="leadingMargin" id="mDc-F3-zTJ"/>
                                                 <constraint firstItem="ROD-fp-PXs" firstAttribute="top" secondItem="AUD-we-R2I" secondAttribute="bottom" constant="6" id="mos-By-AT7"/>
@@ -408,7 +415,7 @@
                         <outlet property="senateTopBillNameBottom" destination="vIb-en-NXf" id="h5S-Xd-FAj"/>
                         <outlet property="senateWidth" destination="MUq-QG-o7M" id="H55-4D-64Q"/>
                         <outlet property="sponsorNameLabel" destination="iq1-vM-GAd" id="cWh-zA-QGp"/>
-                        <outlet property="sponsorTitleLabel" destination="dJN-fY-lSA" id="IB3-pS-Gw4"/>
+                        <outlet property="sponsorVoteLabel" destination="LYo-hF-cas" id="X8W-Bc-dYq"/>
                         <outlet property="summaryLabel" destination="jUS-Db-ztW" id="jRo-QP-IN2"/>
                     </connections>
                 </tableViewController>

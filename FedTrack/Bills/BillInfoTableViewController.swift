@@ -39,22 +39,43 @@ class BillInfoTableViewController: UITableViewController {
     
     @IBOutlet weak var latestActionDateLabel: UILabel!
     @IBOutlet weak var latestActionLabel: UILabel!
-    @IBOutlet weak var sponsorTitleLabel: UILabel!
     @IBOutlet weak var sponsorNameLabel: UILabel!
+    @IBOutlet weak var sponsorVoteLabel: UILabel!
     
     var billInfo: Bill?
+    var recentBills: [Votes] = []
+    var specificVote: SpecificVote?
+    var rollCall = Vote.rollCall
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let billInfo = billInfo {
+        
+        
+        RecentVotesURLController.fetchRecentVotesItems() { (bills) in
+            DispatchQueue.main.async {
+                self.recentBills = bills ?? []
+                self.tableView.reloadData()
+            }
+        }
+        
+        SpecificBillURLController.fetchSpecificBillItems(rollCall: rollCall) { (bills) in
+            DispatchQueue.main.async {
+                self.specificVote = bills ?? []
+                self.tableView.reloadData()
+            }
+        }
+        
+        
+        
+        if let billInfo = billInfo, let specificVote = specificVote {
             numberLabel?.text = "\(billInfo.number)"
             nameLabel?.text = "\(billInfo.shortTitle)"
            summaryLabel?.text = "\(billInfo.summary)"
             latestActionDateLabel?.text = "\(billInfo.latestActionDate)"
             latestActionLabel?.text = "\(billInfo.latestAction)"
-            sponsorTitleLabel?.text = "\(billInfo.sponsorTitle)"
-            sponsorNameLabel?.text = "\(billInfo.sponsorName)"
+            sponsorNameLabel?.text = "\(specificVote.sponsor)"
+            sponsorVoteLabel?.text = "\(specificVote.positions)"
             
             if billInfo.summary.isEmpty {
                 summaryLabel?.text = "Summary N/A"

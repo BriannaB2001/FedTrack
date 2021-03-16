@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+struct Vote: Codable {
+    var rollCall: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case rollCall = "roll_call"
+    }
+}
+
+struct RecentVotes: Codable {
+    var results: [Votes]
+}
+
+struct Votes: Codable {
+    var votes: [Vote]
+}
