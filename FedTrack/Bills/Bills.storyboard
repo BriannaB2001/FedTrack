@@ -323,8 +323,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sponsor Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJN-fY-lSA">
-                                                    <rect key="frame" x="20" y="67" width="101" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJN-fY-lSA">
+                                                    <rect key="frame" x="20" y="89.5" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -335,8 +335,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sponsor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq1-vM-GAd">
-                                                    <rect key="frame" x="129" y="67" width="113" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq1-vM-GAd">
+                                                    <rect key="frame" x="70" y="89.5" width="35" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -347,44 +347,38 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYo-hF-cas">
-                                                    <rect key="frame" x="250" y="67" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Yeas - Nays" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NG-zn-760">
+                                                    <rect key="frame" x="20" y="63.5" width="90.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# - #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdf-2j-Ygh">
+                                                    <rect key="frame" x="115.5" y="63.5" width="37" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dJN-fY-lSA" firstAttribute="top" secondItem="ROD-fp-PXs" secondAttribute="bottom" constant="8.5" id="HqE-92-pa0"/>
+                                                <constraint firstItem="xdf-2j-Ygh" firstAttribute="leading" secondItem="9NG-zn-760" secondAttribute="trailing" constant="5" id="4fy-Bh-1fg"/>
+                                                <constraint firstAttribute="bottom" secondItem="dJN-fY-lSA" secondAttribute="bottom" constant="5" id="4te-ln-Oqb"/>
+                                                <constraint firstItem="xdf-2j-Ygh" firstAttribute="top" secondItem="ROD-fp-PXs" secondAttribute="bottom" constant="5" id="6IP-be-hhG"/>
+                                                <constraint firstAttribute="bottom" secondItem="iq1-vM-GAd" secondAttribute="bottom" constant="60.5" id="8Eg-l9-mpU"/>
                                                 <constraint firstItem="B7U-BO-uNn" firstAttribute="top" secondItem="55u-ha-Vev" secondAttribute="top" constant="11" id="JLb-zj-Gec"/>
+                                                <constraint firstItem="9NG-zn-760" firstAttribute="leading" secondItem="55u-ha-Vev" secondAttribute="leadingMargin" id="N9l-pP-BJH"/>
+                                                <constraint firstItem="dJN-fY-lSA" firstAttribute="top" secondItem="9NG-zn-760" secondAttribute="bottom" constant="5" id="PnR-xg-tQP"/>
+                                                <constraint firstItem="9NG-zn-760" firstAttribute="top" secondItem="ROD-fp-PXs" secondAttribute="bottom" constant="5" id="Pne-7D-10c"/>
                                                 <constraint firstItem="B7U-BO-uNn" firstAttribute="leading" secondItem="AUD-we-R2I" secondAttribute="trailing" constant="5" id="Qkv-r8-nuQ"/>
                                                 <constraint firstItem="ROD-fp-PXs" firstAttribute="leading" secondItem="55u-ha-Vev" secondAttribute="leadingMargin" id="ZtM-6k-8aJ"/>
-                                                <constraint firstItem="LYo-hF-cas" firstAttribute="leading" secondItem="iq1-vM-GAd" secondAttribute="trailing" id="aTv-aT-tIF"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ROD-fp-PXs" secondAttribute="trailing" id="lT6-XU-hlt"/>
                                                 <constraint firstItem="dJN-fY-lSA" firstAttribute="leading" secondItem="55u-ha-Vev" secondAttribute="leadingMargin" id="mDc-F3-zTJ"/>
                                                 <constraint firstItem="ROD-fp-PXs" firstAttribute="top" secondItem="AUD-we-R2I" secondAttribute="bottom" constant="6" id="mos-By-AT7"/>
                                                 <constraint firstItem="AUD-we-R2I" firstAttribute="top" secondItem="55u-ha-Vev" secondAttribute="topMargin" id="qpb-V7-lh6"/>
-                                                <constraint firstItem="iq1-vM-GAd" firstAttribute="top" secondItem="ROD-fp-PXs" secondAttribute="bottom" constant="8.5" id="s4t-KB-PrH"/>
                                                 <constraint firstItem="iq1-vM-GAd" firstAttribute="leading" secondItem="dJN-fY-lSA" secondAttribute="trailing" constant="5" id="sin-bC-kwu"/>
                                                 <constraint firstItem="AUD-we-R2I" firstAttribute="leading" secondItem="55u-ha-Vev" secondAttribute="leadingMargin" id="ws2-ld-Blf"/>
+                                                <constraint firstItem="iq1-vM-GAd" firstAttribute="top" secondItem="xdf-2j-Ygh" secondAttribute="bottom" constant="5" id="zLG-kf-KII"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uGm-4o-Mvf">
-                                        <rect key="frame" x="0.0" y="372" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uGm-4o-Mvf" id="KM5-5S-UMl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sen/HR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-Yi-TQL">
-                                                    <rect key="frame" x="20" y="11" width="57" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -410,13 +404,14 @@
                         <outlet property="presidentTopBillNameBottom" destination="Oat-yi-UDD" id="m6v-BG-Orm"/>
                         <outlet property="presidentWidth" destination="WSt-bO-PgD" id="wlK-Zr-rop"/>
                         <outlet property="progressView" destination="kYh-o1-Hcy" id="Bdi-kd-CFH"/>
+                        <outlet property="repNameLabel" destination="dJN-fY-lSA" id="9Q4-Ni-W8l"/>
+                        <outlet property="repVoteLabel" destination="iq1-vM-GAd" id="fqW-We-4PX"/>
                         <outlet property="senateHeight" destination="Zj1-jW-pTb" id="M3o-eu-myy"/>
                         <outlet property="senateLeadingHouseTrailing" destination="0eS-u8-iol" id="r9T-o3-uBi"/>
                         <outlet property="senateTopBillNameBottom" destination="vIb-en-NXf" id="h5S-Xd-FAj"/>
                         <outlet property="senateWidth" destination="MUq-QG-o7M" id="H55-4D-64Q"/>
-                        <outlet property="sponsorNameLabel" destination="iq1-vM-GAd" id="cWh-zA-QGp"/>
-                        <outlet property="sponsorVoteLabel" destination="LYo-hF-cas" id="X8W-Bc-dYq"/>
                         <outlet property="summaryLabel" destination="jUS-Db-ztW" id="jRo-QP-IN2"/>
+                        <outlet property="yeaNayLabel" destination="xdf-2j-Ygh" id="Mpm-kO-bkB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yk-Af-35R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

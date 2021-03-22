@@ -124,7 +124,16 @@
                     <tabBarItem key="tabBarItem" title="Overview" image="clock.fill" catalog="system" selectedImage="clock.fill" id="QMf-I2-OQV">
                         <color key="badgeColor" systemColor="systemGrayColor"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="Overview" id="7pp-84-JVc"/>
+                    <navigationItem key="navigationItem" title="Overview" id="7pp-84-JVc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Bad-hi-wcX">
+                            <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State*" textAlignment="natural" minimumFontSize="17" id="GXz-k6-vMp">
+                                <rect key="frame" x="302" y="5" width="92" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaa-F9-NEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
