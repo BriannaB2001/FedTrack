@@ -8,7 +8,7 @@
 import Foundation
 
 class RecentVotesURLController {
-    static func fetchRecentVotesItems(completion: @escaping ([Votes]?) -> Void) {
+    static func fetchRecentVotesItems(completion: @escaping (Votes?) -> Void) {
         guard let baseURL = URL(string: "https://api.propublica.org/congress/v1/house/votes/recent.json") else { fatalError() }
         
         let key = "VBuip8RlZmugied6nsDVbd8j1b4fxJ2Y3kiFrgNd"

@@ -19,21 +19,30 @@ struct SpecificVotes: Codable {
     var vote: SpecificVote
 }
 
+struct Total: Codable {
+    var yes: String
+    var no: String
+}
+
 struct SpecificVote: Codable {
-    var positions: Positions
+    var total: Total
+    var positions: [Positions]
     
     enum CodingKeys: String, CodingKey {
         case positions = "positions"
+        case total = "total"
     }
 }
 
 struct Positions: Codable {
     var name: String
-    var votePosition: String
+//    var votePosition: String
+    var state: String
     
     enum Codingkeys: String, CodingKey {
         case name = "name"
-        case votingPosition = "voting_position"
+//        case votePosition = "vote_position"
+        case state = "state"
     }
 }
 

@@ -40,7 +40,7 @@ class FavoritedBillTableViewController: UITableViewController {
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)
         
-        let congressView = UIHostingController(rootView: ContentView(committee: bill.committee, house: (bill.house != nil), senate: (bill.senate != nil), enacted: (bill.enacted != nil)))
+        let congressView = UIHostingController(rootView: ContentView(committee: bill.committee, house: (bill.house != nil), senate: (bill.senate != nil), enacted: (bill.enacted != nil), billName: bill.shortTitle, isFavorited: true, billSubject: bill.primarySubject ))
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
         congressView.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(congressView.view)

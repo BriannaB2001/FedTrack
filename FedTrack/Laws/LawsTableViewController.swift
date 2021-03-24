@@ -49,7 +49,7 @@ class LawsTableViewController: UITableViewController {
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)
         
-        let congressView = UIHostingController(rootView:         ContentView(committee: true, house: true, senate: true, enacted: false))
+        let congressView = UIHostingController(rootView: ContentView(committee: true, house: true, senate: true, enacted: false, billName: bill.shortTitle, isFavorited: true, billSubject: bill.primarySubject))
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
         congressView.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(congressView.view)

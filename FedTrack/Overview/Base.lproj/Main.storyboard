@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <!--Overview-->
         <scene sceneID="jvc-p0-ANH">
             <objects>
-                <tableViewController storyboardIdentifier="Overview" id="z3X-3k-3gy" customClass="OverviewTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="z3X-3k-3gy" customClass="OverviewTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zjA-WJ-2Lm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,13 +126,12 @@
                         <color key="badgeColor" systemColor="systemGrayColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Overview" id="7pp-84-JVc">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Bad-hi-wcX">
-                            <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State*" textAlignment="natural" minimumFontSize="17" id="GXz-k6-vMp">
-                                <rect key="frame" x="302" y="5" width="92" height="34"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="aEw-lf-dwn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JNA-eE-cRg">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -140,10 +140,26 @@
             </objects>
             <point key="canvasLocation" x="-525" y="110"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="tSH-Rv-5VV">
+            <objects>
+                <viewController id="nN1-3a-O7v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UxU-Hl-8CF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Waa-4A-VAd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKE-Od-oxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="65"/>
+        </scene>
         <!--Overview-->
         <scene sceneID="vTR-Dc-Uni">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EBu-T5-fcI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Overview" automaticallyAdjustsScrollViewInsets="NO" id="EBu-T5-fcI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Overview" image="clock.fill" catalog="system" id="i3M-vr-fnP">
                         <color key="badgeColor" systemColor="systemGrayColor"/>
                         <imageReference key="selectedImage" image="clock.fill" catalog="system" symbolScale="large"/>

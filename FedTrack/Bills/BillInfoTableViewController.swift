@@ -39,26 +39,48 @@ class BillInfoTableViewController: UITableViewController {
     @IBOutlet weak var repVoteLabel: UILabel!
     
     var billInfo: Bill?
-    var recentBills: [Votes] = []
-    var specificVote: SpecificVote?
+    var recentBills: Votes?
+    var specificVote: SpecificBill?
     var rollCall: Int = 17
+    var state: String = "UT"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         RecentVotesURLController.fetchRecentVotesItems() { (bills) in
             DispatchQueue.main.async {
-                self.recentBills = bills ?? []
+                self.recentBills = bills
+                guard let recentBillsForVotes = self.recentBills else {fatalError()}
+                    for bill in recentBillsForVotes.votes {
+                        if bill.bill.number == self.billInfo?.number {
+                            print ("we found a match")
+                            SpecificBillURLController.fetchSpecificBillItems(rollCall: bill.rollCall) { (bills) in
+                                        DispatchQueue.main.async {
+                                            self.specificVote = bills
+                                            var peopleWhoVoted: [String] = []
+                                            for position in self.specificVote!.votes.vote.positions {
+                                                if position.state == self.state {
+                                                    peopleWhoVoted.append(position.name)
+                                                }
+                                            }
+                                            print(peopleWhoVoted)
+//                                            self.specificVote = bills ?? []
+                                            self.tableView.reloadData()
+                                        }
+                                    }
+                        
+                }
                 self.tableView.reloadData()
+            }
             }
         }
         
-        SpecificBillURLController.fetchSpecificBillItems(rollCall: rollCall) { (bills) in
-            DispatchQueue.main.async {
-                self.specificVote = bills ?? []
-                self.tableView.reloadData()
-            }
-        }
+//        SpecificBillURLController.fetchSpecificBillItems(rollCall: rollCall) { (bills) in
+//            DispatchQueue.main.async {
+//                self.specificVote = bills ?? []
+//                self.tableView.reloadData()
+//            }
+//        }
         
         if let billInfo = billInfo, let specificVote = specificVote {
             numberLabel?.text = "\(billInfo.number)"

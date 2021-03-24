@@ -8,25 +8,23 @@
 import SwiftUI
 
 struct DividerView: View {
-    var colorForView: Color = .blue
-    
+    var colorForView = Color("Grey")
     var body: some View {
         VStack {
             Divider()
+                .frame(width: 50, height: 3, alignment: .center)
                 .background(colorForView)
         }
     }
 }
-
 struct ContentView: View {
-    
-//    var bills = Bill
-    
-    let committee: Bool
+    var committee: Bool
     var house: Bool
     var senate: Bool
     var enacted: Bool
-    
+    var billName: String
+    var isFavorited: Bool
+    var billSubject: String
     var comitteeButtonColor: Color {
         return committee ? Color("NavyBlue") : Color("Grey")
     }
@@ -39,51 +37,55 @@ struct ContentView: View {
     var enactedButtonColor: Color {
         return enacted ? Color("NavyBlue") : Color("Grey")
     }
-    
-    var body: some View {
-        
-        VStack {
-            
-//        HStack {
-//            Text (bills.number)
-//            Spacer()
-//            Text (bills.shortTitle)
-//            Spacer()
-//            Button (Image(systemName: "star.fill"))
-//        }
-//            Spacer()
-//
-//            Text (bills.primarySubject)
-            
-//        Spacer()
-            
-        HStack(spacing: 0) {
-                Image(systemName: "c.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(comitteeButtonColor)
-            DividerView(colorForView: houseButtonColor)
-                Image(systemName: "house.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(houseButtonColor)
-            DividerView(colorForView: senateButtonColor)
-                Image(systemName: "person.2.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(senateButtonColor)
-            DividerView(colorForView: enactedButtonColor)
-                Image(systemName: "pencil.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(enactedButtonColor)
-        }
+    var favoritedButton: Image {
+        return isFavorited ? Image(systemName: "star.fill"): Image(systemName: "star")
     }
+    var favoritedColor: Color {
+        return isFavorited ? .yellow : .gray
+    }
+    var body: some View {
+        HStack() {
+            VStack(alignment: .leading) {
+                Text(billName)
+                    .font(Font.headline.weight(.bold))
+//                    .font(.headline)
+                    .font(.system(size: 8))
+                Text(billSubject)
+//                    .fontWeight(.ultraLight)
+                    .font(.system(size: 10))
+                HStack(spacing: 0) {
+                        Image(systemName: "c.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(comitteeButtonColor)
+                    DividerView(colorForView: Color("Grey"))
+                        Image(systemName: "house.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(houseButtonColor)
+                    DividerView(colorForView: Color("Grey"))
+                        Image(systemName: "person.2.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(senateButtonColor)
+                    DividerView(colorForView: Color("Grey"))
+                        Image(systemName: "pencil.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(enactedButtonColor)
+                }
+            }
+//            favoritedButton
+//            .resizable()
+//            .foregroundColor(favoritedColor)
+//                .frame(width: 50, height: 50, alignment: .center)
+        }
+        .padding(.top, 10)
+        .padding(.bottom, 10)
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(committee: true, house: true, senate: true, enacted: false).previewLayout(.fixed(width: 768, height: 100))
+        ContentView(committee: true, house: true, senate: false, enacted: false, billName: "Bill Number HR", isFavorited: true, billSubject: "Education").previewLayout(.fixed(width: 768, height: 100))
     }
 }

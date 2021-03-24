@@ -60,8 +60,11 @@ class PopOverTableViewController: UITableViewController {
             if bill.primarySubject == selectedSubject {
                 newBillArray.append(bill)
             }
+            if selectedSubject == "All" {
+                newBillArray = bills
+            }
         }
-        
+        print(newBillArray)
         return [Bills( bills: newBillArray)]
     }
 }
