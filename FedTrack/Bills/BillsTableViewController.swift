@@ -17,7 +17,6 @@ class BillsTableViewController: UITableViewController, UIPopoverPresentationCont
         let storyboard : UIStoryboard = UIStoryboard(name: "Bills", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "PopOverTableViewController") as! PopOverTableViewController
         vc.subjectDelegate = self
-//        vc.allBills = allBills
             vc.modalPresentationStyle = .popover
             let popover: UIPopoverPresentationController = vc.popoverPresentationController!
             popover.barButtonItem = sender

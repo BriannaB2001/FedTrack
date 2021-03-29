@@ -11,6 +11,16 @@ class OverviewTableViewController: UITableViewController {
     
     var allBills = [Bills]()
     
+    @IBAction func displayStatePopOver(_ sender: UIBarButtonItem) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "StatesPopUpTableViewController") as! StatesPopUpTableViewController
+        vc.stateDelegate = self
+            vc.modalPresentationStyle = .popover
+            let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+            popover.barButtonItem = sender
+            present(vc, animated: true, completion:nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +30,6 @@ class OverviewTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        
     }
     
     // MARK: - Table view data source
@@ -32,7 +41,6 @@ class OverviewTableViewController: UITableViewController {
             return 0
         }
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "overviewCell", for: indexPath) as! BillsTableViewCell
@@ -54,8 +62,8 @@ class OverviewTableViewController: UITableViewController {
         
         return normalCellHeight
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "BillsToSpecificBill" {
 //            let billInfoTableViewController = segue.destination as!
 //                BillInfoTableViewController
@@ -65,7 +73,3 @@ class OverviewTableViewController: UITableViewController {
 //        }
 //    }
 }
-
-var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
-
-

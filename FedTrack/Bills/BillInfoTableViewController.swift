@@ -51,41 +51,41 @@ class BillInfoTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.recentBills = bills
                 guard let recentBillsForVotes = self.recentBills else {fatalError()}
-                    for bill in recentBillsForVotes.votes {
-                        if bill.bill.number == self.billInfo?.number {
-                            print ("we found a match")
-                            SpecificBillURLController.fetchSpecificBillItems(rollCall: bill.rollCall) { (bills) in
-                                        DispatchQueue.main.async {
-                                            self.specificVote = bills
-                                            var peopleWhoVoted: [String] = []
-                                            for position in self.specificVote!.votes.vote.positions {
-                                                if position.state == self.state {
-                                                    peopleWhoVoted.append(position.name)
-                                                }
-                                            }
-                                            print(peopleWhoVoted)
-//                                            self.specificVote = bills ?? []
-                                            self.tableView.reloadData()
-                                        }
+                for bill in recentBillsForVotes.votes {
+                    if bill.bill.number == self.billInfo?.number {
+                        print ("we found a match")
+                        SpecificBillURLController.fetchSpecificBillItems(rollCall: bill.rollCall) { (bills) in
+                            DispatchQueue.main.async {
+                                self.specificVote = bills
+                                var peopleWhoVoted: [String] = []
+                                for position in self.specificVote!.votes.vote.positions {
+                                    if position.state == self.state {
+                                        peopleWhoVoted.append(position.name)
                                     }
+                                }
+                                print(peopleWhoVoted)
+                                //                                            self.specificVote = bills ?? []
+                                self.tableView.reloadData()
+                            }
+                        }
                         
+                    }
+                    self.tableView.reloadData()
                 }
-                self.tableView.reloadData()
-            }
             }
         }
         
-//        SpecificBillURLController.fetchSpecificBillItems(rollCall: rollCall) { (bills) in
-//            DispatchQueue.main.async {
-//                self.specificVote = bills ?? []
-//                self.tableView.reloadData()
-//            }
-//        }
+        //        SpecificBillURLController.fetchSpecificBillItems(rollCall: rollCall) { (bills) in
+        //            DispatchQueue.main.async {
+        //                self.specificVote = bills ?? []
+        //                self.tableView.reloadData()
+        //            }
+        //        }
         
         if let billInfo = billInfo, let specificVote = specificVote {
             numberLabel?.text = "\(billInfo.number)"
             nameLabel?.text = "\(billInfo.shortTitle)"
-           summaryLabel?.text = "\(billInfo.summary)"
+            summaryLabel?.text = "\(billInfo.summary)"
             latestActionDateLabel?.text = "\(billInfo.latestActionDate)"
             latestActionLabel?.text = "\(billInfo.latestAction)"
             
@@ -93,60 +93,60 @@ class BillInfoTableViewController: UITableViewController {
                 summaryLabel?.text = "Summary N/A"
             }
         }
-//        updateImage(bill: billInfo!)
+        //        updateImage(bill: billInfo!)
     }
     
-//    func updateImage(bill: Bill) {
-//
-//        if case let bill.committee = true {
-//            committeeImage.image = UIImage(named: "BlueC")
-//            committeeWidth.constant = 97
-//            committeeHeight.constant = 97
-//            committeeTopBillNameBottom.constant = 5
-//
-//        } else {
-//            committeeImage.image = UIImage(named: "GreyC")
-//            committeeWidth.constant = 86
-//            committeeHeight.constant = 91
-//            committeeTopBillNameBottom.constant = 5
-//        }
-//
-//
-//        if let house = bill.house  {
-//            houseImage.image = UIImage(named: "BlueHouse")
-//            houseWidth.constant = 85
-//            houseHeight.constant = 87
-//            houseTopBillNameBottom.constant = 1
-//
-//        } else {
-//            houseImage.image = UIImage(named: "GreyHouse")
-//            houseWidth.constant = 93
-//           houseHeight.constant = 103
-//        }
-//
-//        if let senate = bill.senate  {
-//            senateImage.image = UIImage(named: "BlueSenate")
-//            senateWidth.constant = 103
-//            senateHeight.constant = 118
-//            senateTopBillNameBottom.constant = -17
-//
-//        } else {
-//            senateImage.image = UIImage(named: "GreySenate")
-//            senateWidth.constant = 86
-//            senateHeight.constant = 80
-//            senateTopBillNameBottom.constant = -5
-//        }
-//
-//        if let enacted = bill.enacted  {
-//            presidentImage.image = UIImage(named: "BluePresident")
-//            presidentWidth.constant = 117
-//            presidentHeight.constant = 117
-//            presidentTopBillNameBottom.constant = -19
-//
-//        } else {
-//            presidentImage.image = UIImage(named: "GreyPresident")
-//            presidentWidth.constant = 109
-//            presidentHeight.constant = 99
-//        }
-//    }
+    //    func updateImage(bill: Bill) {
+    //
+    //        if case let bill.committee = true {
+    //            committeeImage.image = UIImage(named: "BlueC")
+    //            committeeWidth.constant = 97
+    //            committeeHeight.constant = 97
+    //            committeeTopBillNameBottom.constant = 5
+    //
+    //        } else {
+    //            committeeImage.image = UIImage(named: "GreyC")
+    //            committeeWidth.constant = 86
+    //            committeeHeight.constant = 91
+    //            committeeTopBillNameBottom.constant = 5
+    //        }
+    //
+    //
+    //        if let house = bill.house  {
+    //            houseImage.image = UIImage(named: "BlueHouse")
+    //            houseWidth.constant = 85
+    //            houseHeight.constant = 87
+    //            houseTopBillNameBottom.constant = 1
+    //
+    //        } else {
+    //            houseImage.image = UIImage(named: "GreyHouse")
+    //            houseWidth.constant = 93
+    //           houseHeight.constant = 103
+    //        }
+    //
+    //        if let senate = bill.senate  {
+    //            senateImage.image = UIImage(named: "BlueSenate")
+    //            senateWidth.constant = 103
+    //            senateHeight.constant = 118
+    //            senateTopBillNameBottom.constant = -17
+    //
+    //        } else {
+    //            senateImage.image = UIImage(named: "GreySenate")
+    //            senateWidth.constant = 86
+    //            senateHeight.constant = 80
+    //            senateTopBillNameBottom.constant = -5
+    //        }
+    //
+    //        if let enacted = bill.enacted  {
+    //            presidentImage.image = UIImage(named: "BluePresident")
+    //            presidentWidth.constant = 117
+    //            presidentHeight.constant = 117
+    //            presidentTopBillNameBottom.constant = -19
+    //
+    //        } else {
+    //            presidentImage.image = UIImage(named: "GreyPresident")
+    //            presidentWidth.constant = 109
+    //            presidentHeight.constant = 99
+    //        }
+    //    }
 }

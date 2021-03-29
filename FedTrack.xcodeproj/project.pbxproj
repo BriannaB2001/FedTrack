@@ -29,6 +29,7 @@
 		DA9A189625E96ED7001037EF /* FavoritedBillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A189525E96ED7001037EF /* FavoritedBillTableViewController.swift */; };
 		DA9A189C25E96FA4001037EF /* FavoritedBillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A189B25E96FA4001037EF /* FavoritedBillTableViewCell.swift */; };
 		DAAD3A3925D5ACEC0098394B /* BillInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD3A3825D5ACEC0098394B /* BillInfoTableViewController.swift */; };
+		DAC662A6260E687800A94932 /* StatesPopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC662A5260E687800A94932 /* StatesPopUpTableViewController.swift */; };
 		DADEE6BF25F808A000EAB282 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE6BE25F808A000EAB282 /* UserDefaults.swift */; };
 		DADEE6C525F813A700EAB282 /* Bills.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADEE6C425F813A700EAB282 /* Bills.storyboard */; };
 		DADEE6CB25F828D200EAB282 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADEE6CA25F828D200EAB282 /* TabBar.storyboard */; };
@@ -64,6 +65,7 @@
 		DA9A189525E96ED7001037EF /* FavoritedBillTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedBillTableViewController.swift; sourceTree = "<group>"; };
 		DA9A189B25E96FA4001037EF /* FavoritedBillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedBillTableViewCell.swift; sourceTree = "<group>"; };
 		DAAD3A3825D5ACEC0098394B /* BillInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInfoTableViewController.swift; sourceTree = "<group>"; };
+		DAC662A5260E687800A94932 /* StatesPopUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesPopUpTableViewController.swift; sourceTree = "<group>"; };
 		DADEE6BE25F808A000EAB282 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		DADEE6C425F813A700EAB282 /* Bills.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bills.storyboard; sourceTree = "<group>"; };
 		DADEE6CA25F828D200EAB282 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				DA04873F25CC7226003920C0 /* Main.storyboard */,
+				DAC662A5260E687800A94932 /* StatesPopUpTableViewController.swift */,
 				DADEE6CD25F8292500EAB282 /* OverviewTableViewController.swift */,
 			);
 			path = Overview;
@@ -275,6 +278,7 @@
 				DA54D18525E8405300E5FD0C /* PopOverTableViewController.swift in Sources */,
 				DA57C91925EEC14800F903BD /* LawsTableViewController.swift in Sources */,
 				DADEE6D325F82EC600EAB282 /* SwiftUiImageView.swift in Sources */,
+				DAC662A6260E687800A94932 /* StatesPopUpTableViewController.swift in Sources */,
 				DADEE6BF25F808A000EAB282 /* UserDefaults.swift in Sources */,
 				DA60062C26012D6D0033E5F0 /* SpecificBill.swift in Sources */,
 				DA6006252601271D0033E5F0 /* RecentVotes.swift in Sources */,
