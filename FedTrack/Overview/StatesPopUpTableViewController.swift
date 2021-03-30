@@ -9,8 +9,17 @@ import UIKit
 
 class StatesPopUpTableViewController: UITableViewController {
     
+    var specificBill = [SpecificBill]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        SpecificBillURLController.fetchSpecificBillItems { (bills) in
+//            DispatchQueue.main.async {
+//                self.specificBill = bills ?? []
+//                self.tableView.reloadData()
+//            }
+//        }
     }
     
     var stateDelegate: StateChosen?

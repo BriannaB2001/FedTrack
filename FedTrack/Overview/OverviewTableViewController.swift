@@ -7,14 +7,16 @@
 import UIKit
 import SwiftUI
 
-class OverviewTableViewController: UITableViewController {
+class OverviewTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate, StateChosen {
     
+    func stateSenators(bill: [SpecificBill]) {
+        }
     var allBills = [Bills]()
     
     @IBAction func displayStatePopOver(_ sender: UIBarButtonItem) {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "StatesPopUpTableViewController") as! StatesPopUpTableViewController
-        vc.stateDelegate = self
+            vc.stateDelegate = self
             vc.modalPresentationStyle = .popover
             let popover: UIPopoverPresentationController = vc.popoverPresentationController!
             popover.barButtonItem = sender

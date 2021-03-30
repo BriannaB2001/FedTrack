@@ -75,10 +75,10 @@ struct ContentView: View {
                             .foregroundColor(enactedButtonColor)
                 }
             }
-//            favoritedButton
-//            .resizable()
-//            .foregroundColor(favoritedColor)
-//                .frame(width: 50, height: 50, alignment: .center)
+            favoritedButton
+            .resizable()
+            .foregroundColor(favoritedColor)
+                .frame(width: 35, height: 35, alignment: .center)
         }
         .padding(.top, 10)
         .padding(.bottom, 10)

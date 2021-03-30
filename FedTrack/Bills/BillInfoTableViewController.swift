@@ -34,13 +34,14 @@ class BillInfoTableViewController: UITableViewController {
     
     @IBOutlet weak var latestActionDateLabel: UILabel!
     @IBOutlet weak var latestActionLabel: UILabel!
-    @IBOutlet weak var yeaNayLabel: UILabel!
+    @IBOutlet weak var yesLabel: UILabel!
+    @IBOutlet weak var noLabel: UILabel!
     @IBOutlet weak var repNameLabel: UILabel!
     @IBOutlet weak var repVoteLabel: UILabel!
     
     var billInfo: Bill?
     var recentBills: Votes?
-    var specificVote: SpecificBill?
+    var specificBill: SpecificBill?
     var rollCall: Int = 17
     var state: String = "UT"
     
@@ -56,9 +57,9 @@ class BillInfoTableViewController: UITableViewController {
                         print ("we found a match")
                         SpecificBillURLController.fetchSpecificBillItems(rollCall: bill.rollCall) { (bills) in
                             DispatchQueue.main.async {
-                                self.specificVote = bills
+                                self.specificBill = bills
                                 var peopleWhoVoted: [String] = []
-                                for position in self.specificVote!.votes.vote.positions {
+                                for position in self.specificBill!.votes.vote.positions {
                                     if position.state == self.state {
                                         peopleWhoVoted.append(position.name)
                                     }
@@ -82,12 +83,15 @@ class BillInfoTableViewController: UITableViewController {
         //            }
         //        }
         
-        if let billInfo = billInfo, let specificVote = specificVote {
+        if let billInfo = billInfo, let specificBill = specificBill {
             numberLabel?.text = "\(billInfo.number)"
             nameLabel?.text = "\(billInfo.shortTitle)"
             summaryLabel?.text = "\(billInfo.summary)"
             latestActionDateLabel?.text = "\(billInfo.latestActionDate)"
             latestActionLabel?.text = "\(billInfo.latestAction)"
+            yesLabel?.text = "\(specificBill.votes.vote.total.yes)"
+            noLabel?.text = "\(specificBill.votes.vote.total.no)"
+
             
             if billInfo.summary.isEmpty {
                 summaryLabel?.text = "Summary N/A"

@@ -125,14 +125,10 @@
                         <color key="badgeColor" systemColor="systemGrayColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Overview" id="7pp-84-JVc">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="aEw-lf-dwn">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JNA-eE-cRg">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="State" id="ykE-SF-4Ag">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="displayStatePopOver:" destination="z3X-3k-3gy" id="5od-Rm-QCP"/>
+                                <action selector="displayStatePopOver:" destination="z3X-3k-3gy" id="Z6I-sN-otT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -142,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="-525" y="110"/>
         </scene>
-        <!--Table View Controller-->
+        <!--States Pop Up Table View Controller-->
         <scene sceneID="7k6-jw-r6s">
             <objects>
-                <tableViewController id="aE3-xe-RTF" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StatesPopUpTableViewController" id="aE3-xe-RTF" customClass="StatesPopUpTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bDe-R6-UQx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
