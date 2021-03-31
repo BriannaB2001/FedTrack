@@ -31,7 +31,7 @@
         <!--Overview-->
         <scene sceneID="7Qr-bN-8hw">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Overview" id="ZlL-lz-GfO" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Overview" referencedIdentifier="Overview" id="ZlL-lz-GfO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" selectedImage="pencil" catalog="system" id="Z3R-cC-hvz">
                         <color key="badgeColor" systemColor="systemGrayColor"/>
                     </tabBarItem>

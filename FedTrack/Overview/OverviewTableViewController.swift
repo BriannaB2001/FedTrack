@@ -14,7 +14,7 @@ class OverviewTableViewController: UITableViewController, UIPopoverPresentationC
     var allBills = [Bills]()
     
     @IBAction func displayStatePopOver(_ sender: UIBarButtonItem) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard : UIStoryboard = UIStoryboard(name: "Overview", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "StatesPopUpTableViewController") as! StatesPopUpTableViewController
             vc.stateDelegate = self
             vc.modalPresentationStyle = .popover
