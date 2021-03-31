@@ -20,8 +20,8 @@ struct SpecificVotes: Codable {
 }
 
 struct Total: Codable {
-    var yes: String
-    var no: String
+    var yes: Int
+    var no: Int
 }
 
 struct SpecificVote: Codable {

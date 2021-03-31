@@ -13,7 +13,7 @@ struct Vote: Codable {
     
     enum CodingKeys: String, CodingKey {
         case rollCall = "roll_call"
-        case bill = "Bill"
+        case bill = "bill"
     }
 }
 

@@ -14,12 +14,10 @@ class StatesPopUpTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        SpecificBillURLController.fetchSpecificBillItems { (bills) in
-//            DispatchQueue.main.async {
-//                self.specificBill = bills ?? []
-//                self.tableView.reloadData()
-//            }
-//        }
+        let string = "Alabama"
+            let other = States.init(rawValue: string)
+            print(other)
+    
     }
     
     var stateDelegate: StateChosen?
@@ -42,13 +40,12 @@ class StatesPopUpTableViewController: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let data = popUpData[indexPath.row]
-//        print (data)
-//        let billsForSubjects = subjectSorter(selectedSubject: subject)
-//        subjectDelegate?.subjectBills(bill: billsForSubjects)
-//        self.dismiss(animated: true, completion: nil)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = popUpData[indexPath.row]
+        print (data)
+        UserDefaults.standard.setValue(data, forKey: "state")
+        self.dismiss(animated: true, completion: nil)
+    }
 //    
 //    func subjectSorter(selectedSubject: String) -> [Bills] {
 //        var newBillArray: [Bill] = []

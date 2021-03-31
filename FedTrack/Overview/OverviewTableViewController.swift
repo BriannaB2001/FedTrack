@@ -9,8 +9,17 @@ import SwiftUI
 
 class OverviewTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate, StateChosen {
     
+    @IBOutlet weak var stateButton: UIBarButtonItem!
+    
     func stateSenators(bill: [SpecificBill]) {
         }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        if let state = UserDefaults.standard.string(forKey: "state") {
+//            stateButton.title = state
+//        }
+//    }
+    
     var allBills = [Bills]()
     
     @IBAction func displayStatePopOver(_ sender: UIBarButtonItem) {

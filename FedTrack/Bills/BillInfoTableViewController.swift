@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SwiftUI
 
 class BillInfoTableViewController: UITableViewController {
+    
+    @IBOutlet weak var nameContentView: UIView!
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -47,6 +50,7 @@ class BillInfoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         RecentVotesURLController.fetchRecentVotesItems() { (bills) in
             DispatchQueue.main.async {
@@ -58,6 +62,8 @@ class BillInfoTableViewController: UITableViewController {
                         SpecificBillURLController.fetchSpecificBillItems(rollCall: bill.rollCall) { (bills) in
                             DispatchQueue.main.async {
                                 self.specificBill = bills
+                                self.yesLabel?.text = "\(self.specificBill!.votes.vote.total.yes)"
+                                self.noLabel?.text = "\(self.specificBill!.votes.vote.total.no)"
                                 var peopleWhoVoted: [String] = []
                                 for position in self.specificBill!.votes.vote.positions {
                                     if position.state == self.state {
@@ -65,7 +71,7 @@ class BillInfoTableViewController: UITableViewController {
                                     }
                                 }
                                 print(peopleWhoVoted)
-                                //                                            self.specificVote = bills ?? []
+                                //self.specificVote = bills ?? []
                                 self.tableView.reloadData()
                             }
                         }
@@ -76,22 +82,13 @@ class BillInfoTableViewController: UITableViewController {
             }
         }
         
-        //        SpecificBillURLController.fetchSpecificBillItems(rollCall: rollCall) { (bills) in
-        //            DispatchQueue.main.async {
-        //                self.specificVote = bills ?? []
-        //                self.tableView.reloadData()
-        //            }
-        //        }
-        
-        if let billInfo = billInfo, let specificBill = specificBill {
+        if let billInfo = billInfo {
+            nameContentView.addSubview(UIHostingController(rootView: ContentView(committee: billInfo.committee, house: billInfo.house, senate: billInfo.senate, enacted: billInfo.enacted, billName: billInfo.sponsorName, isFavorited: true, billSubject: billInfo.primarySubject)).view)
             numberLabel?.text = "\(billInfo.number)"
             nameLabel?.text = "\(billInfo.shortTitle)"
             summaryLabel?.text = "\(billInfo.summary)"
             latestActionDateLabel?.text = "\(billInfo.latestActionDate)"
             latestActionLabel?.text = "\(billInfo.latestAction)"
-            yesLabel?.text = "\(specificBill.votes.vote.total.yes)"
-            noLabel?.text = "\(specificBill.votes.vote.total.no)"
-
             
             if billInfo.summary.isEmpty {
                 summaryLabel?.text = "Summary N/A"

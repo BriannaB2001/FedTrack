@@ -402,6 +402,7 @@
                         <outlet property="houseWidth" destination="2o4-SV-Hzk" id="uNY-o7-K7T"/>
                         <outlet property="latestActionDateLabel" destination="B7U-BO-uNn" id="7vD-l3-WHD"/>
                         <outlet property="latestActionLabel" destination="ROD-fp-PXs" id="Sil-86-QBF"/>
+                        <outlet property="nameContentView" destination="EnV-DX-Ql3" id="nHB-Sa-kYX"/>
                         <outlet property="nameLabel" destination="ONJ-tS-b35" id="m5D-XU-kZ9"/>
                         <outlet property="noLabel" destination="8G0-nq-RXa" id="Hj8-XN-qUT"/>
                         <outlet property="numberLabel" destination="EJu-3m-faa" id="s4I-K6-eHW"/>
