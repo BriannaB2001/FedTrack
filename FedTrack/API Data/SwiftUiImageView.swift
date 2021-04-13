@@ -4,9 +4,7 @@
 //
 //  Created by Brianna Babcock on 3/9/21.
 //
-
 import SwiftUI
-
 struct DividerView: View {
     var colorForView = Color("Grey")
     var body: some View {
@@ -45,11 +43,19 @@ struct ContentView: View {
     }
     var body: some View {
         HStack() {
+            Spacer()
             VStack(alignment: .leading) {
-                Text(billName)
-                    .font(Font.headline.weight(.bold))
-//                    .font(.headline)
-                    .font(.system(size: 8))
+                HStack {
+                    Text(billName)
+                        .font(Font.headline.weight(.bold))
+    //                    .font(.headline)
+                        .font(.system(size: 8))
+                    Spacer()
+                }
+//                if billSubject == "" {
+//                    Text("No Subject")
+//                        .font(.system(size: 10))
+//                }
                 Text(billSubject)
 //                    .fontWeight(.ultraLight)
                     .font(.system(size: 10))
@@ -73,12 +79,15 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                             .foregroundColor(enactedButtonColor)
+                    Spacer()
                 }
+                .frame(height: 20)
             }
             favoritedButton
             .resizable()
             .foregroundColor(favoritedColor)
                 .frame(width: 35, height: 35, alignment: .center)
+            Spacer()
         }
         .padding(.top, 10)
         .padding(.bottom, 10)
