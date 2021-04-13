@@ -14,9 +14,7 @@ class BillsTableViewCell: UITableViewCell {
     @IBOutlet weak var billNumberLabel: UILabel!
     @IBOutlet weak var billNameLabel: UILabel!
     @IBOutlet weak var billTypeLabel: UILabel!
-
     
-    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var favoritedButton: UIButton!
     
     override func awakeFromNib() {

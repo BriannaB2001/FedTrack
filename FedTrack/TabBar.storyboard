@@ -22,6 +22,7 @@
                         <segue destination="ZlL-lz-GfO" kind="relationship" relationship="viewControllers" id="GHF-cY-yDm"/>
                         <segue destination="SDw-Cd-Xfj" kind="relationship" relationship="viewControllers" id="2p4-GU-qrX"/>
                         <segue destination="Bsp-1Z-Xbt" kind="relationship" relationship="viewControllers" id="xCi-ZC-Ub2"/>
+                        <segue destination="izl-wN-o5n" kind="relationship" relationship="viewControllers" id="Znf-SU-l19"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dv5-Y3-h2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -64,9 +65,21 @@
             </objects>
             <point key="canvasLocation" x="338" y="-521"/>
         </scene>
+        <!--Laws-->
+        <scene sceneID="kBu-yF-xEt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Laws" storyboardName="Laws" referencedIdentifier="Laws" id="izl-wN-o5n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="note.text" catalog="system" selectedImage="note.text" id="KQE-Xv-5aM"/>
+                    <navigationItem key="navigationItem" id="REo-Al-jqd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxO-b4-yZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="-465"/>
+        </scene>
     </scenes>
     <resources>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="Grey">

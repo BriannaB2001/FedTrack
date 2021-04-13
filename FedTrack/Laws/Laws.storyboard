@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="opm-e7-d3s">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Laws Table View Controller-->
+        <!--Item-->
         <scene sceneID="1F2-5d-Lu2">
             <objects>
-                <tableViewController id="jl0-aO-3Vs" customClass="LawsTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Laws" id="jl0-aO-3Vs" customClass="LawsTableViewController" customModule="FedTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U8g-om-pPO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,16 +129,38 @@
                             <outlet property="delegate" destination="jl0-aO-3Vs" id="CCx-QO-Me9"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="note.text" catalog="system" id="vuP-Do-Get"/>
+                    <navigationItem key="navigationItem" id="V22-P2-TQo"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvv-Qg-0ze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9562" y="-124"/>
+            <point key="canvasLocation" x="10471.014492753624" y="-124.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kDm-mJ-cfI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="opm-e7-d3s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3h1-vY-zcC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jl0-aO-3Vs" kind="relationship" relationship="rootViewController" id="GKx-QN-4NN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2N-OF-Uja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9560.8695652173919" y="-124.55357142857142"/>
         </scene>
     </scenes>
     <resources>
         <image name="BlueC" width="102" height="70"/>
         <image name="Empty Default Star" width="419" height="384"/>
         <image name="Yellow Selected Star" width="172.5" height="160"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

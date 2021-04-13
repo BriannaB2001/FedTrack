@@ -44,7 +44,7 @@ class LawsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! BillsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! LawsTableViewCell
         
         let bill = allBills.first!.bills[indexPath.row]
         cell.updateCell(bill: bill)

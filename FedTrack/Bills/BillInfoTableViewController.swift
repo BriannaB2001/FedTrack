@@ -39,8 +39,10 @@ class BillInfoTableViewController: UITableViewController {
     @IBOutlet weak var latestActionLabel: UILabel!
     @IBOutlet weak var yesLabel: UILabel!
     @IBOutlet weak var noLabel: UILabel!
-    @IBOutlet weak var repNameLabel: UILabel!
-    @IBOutlet weak var repVoteLabel: UILabel!
+    @IBOutlet weak var rep1NameLabel: UILabel!
+    @IBOutlet weak var rep1VoteLabel: UILabel!
+    @IBOutlet weak var rep2NameLabel: UILabel!
+    @IBOutlet weak var rep2VoteLabel: UILabel!
     
     var billInfo: Bill?
     var recentBills: Votes?
@@ -48,9 +50,11 @@ class BillInfoTableViewController: UITableViewController {
     var rollCall: Int = 17
     var state: String = "UT"
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.latestActionLabel.numberOfLines = 0
         
         RecentVotesURLController.fetchRecentVotesItems() { (bills) in
             DispatchQueue.main.async {
@@ -66,8 +70,11 @@ class BillInfoTableViewController: UITableViewController {
                                 self.noLabel?.text = "\(self.specificBill!.votes.vote.total.no)"
                                 var peopleWhoVoted: [String] = []
                                 for position in self.specificBill!.votes.vote.positions {
-                                    if position.state == self.state {
-                                        peopleWhoVoted.append(position.name)
+                                    if let stateFromDefaults = UserDefaults.standard.string(forKey: "state"),
+                                       let abbState = self.statesDictionary[stateFromDefaults] {
+                                        if position.state == abbState {
+                                            peopleWhoVoted.append(position.name)
+                                        }
                                     }
                                 }
                                 print(peopleWhoVoted)
@@ -83,12 +90,13 @@ class BillInfoTableViewController: UITableViewController {
         }
         
         if let billInfo = billInfo {
-            nameContentView.addSubview(UIHostingController(rootView: ContentView(committee: billInfo.committee, house: billInfo.house, senate: billInfo.senate, enacted: billInfo.enacted, billName: billInfo.sponsorName, isFavorited: true, billSubject: billInfo.primarySubject)).view)
+//                        nameContentView.addSubview(UIHostingController(rootView: ContentView(committee: billInfo.committee, house: billInfo.house, senate: billInfo.senate, enacted: billInfo.enacted, billName: billInfo.sponsorName, isFavorited: true, billSubject: billInfo.primarySubject)).view)
             numberLabel?.text = "\(billInfo.number)"
             nameLabel?.text = "\(billInfo.shortTitle)"
             summaryLabel?.text = "\(billInfo.summary)"
             latestActionDateLabel?.text = "\(billInfo.latestActionDate)"
             latestActionLabel?.text = "\(billInfo.latestAction)"
+            
             
             if billInfo.summary.isEmpty {
                 summaryLabel?.text = "Summary N/A"
@@ -96,6 +104,56 @@ class BillInfoTableViewController: UITableViewController {
         }
         //        updateImage(bill: billInfo!)
     }
+    var statesDictionary = ["Alabama": "AL",
+            "Alaska": "AK",
+            "Arizona": "AZ",
+            "Arkansas": "AR",
+            "California": "CA",
+            "Colorado": "CO",
+            "Connecticut": "CT",
+            "Delaware": "DE",
+            "Florida": "FL",
+            "Georgia": "GA",
+            "Hawaii": "HI",
+            "Idaho": "ID",
+            "Illinois": "IL",
+            "Indiana": "IN",
+            "Iowa": "IA",
+            "Kansas": "KS",
+            "Kentucky": "KY",
+            "Louisiana": "LA",
+            "Maine": "ME",
+            "Maryland": "MD",
+            "Massachusetts": "MA",
+            "Michigan": "MI",
+            "Minnesota": "MN",
+            "Mississippi": "MS",
+            "Missouri": "MO",
+            "Montana": "MT",
+            "Nebraska": "NE",
+            "Nevada": "NV",
+            "New Hampshire": "NH",
+            "New Jersey": "NJ",
+            "New Mexico": "NM",
+            "New York": "NY",
+            "North Carolina": "NC",
+            "North Dakota": "ND",
+            "Ohio": "OH",
+            "Oklahoma": "OK",
+            "Oregon": "OR",
+            "Pennsylvania": "PA",
+            "Rhode Island": "RI",
+            "South Carolina": "SC",
+            "South Dakota": "SD",
+            "Tennessee": "TN",
+            "Texas": "TX",
+            "Utah": "UT",
+            "Vermont": "VT",
+            "Virginia": "VA",
+            "Washington": "WA",
+            "West Virginia": "WV",
+            "Wisconsin": "WI",
+            "Wyoming": "WY"]
     
     //    func updateImage(bill: Bill) {
     //
