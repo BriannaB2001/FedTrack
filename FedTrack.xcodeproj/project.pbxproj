@@ -112,7 +112,6 @@
 				DADEE6CA25F828D200EAB282 /* TabBar.storyboard */,
 				DA57C90A25EEB25000F903BD /* API Data */,
 				DADEE6D125F82E7E00EAB282 /* Overview */,
-				DA57C90525EEB17100F903BD /* Bills */,
 				DA57C91F25EED66B00F903BD /* Laws */,
 				DA57C90925EEB1E700F903BD /* Login and SignUp */,
 				DA57C90725EEB1A700F903BD /* Favorited Bills */,
@@ -194,6 +193,7 @@
 				DADEE6CD25F8292500EAB282 /* OverviewTableViewController.swift */,
 				DA6006212601269B0033E5F0 /* RecentVotesURLController.swift */,
 				DA60062726012D0F0033E5F0 /* SpecificBillURLController.swift */,
+				DA57C90525EEB17100F903BD /* Bills */,
 			);
 			path = Overview;
 			sourceTree = "<group>";

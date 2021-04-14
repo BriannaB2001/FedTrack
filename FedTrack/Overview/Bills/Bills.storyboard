@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="billCell" rowHeight="88" id="AkV-z0-zhj" customClass="BillsTableViewCell" customModule="FedTrack" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="billCell" rowHeight="88" id="AkV-z0-zhj">
                                 <rect key="frame" x="0.0" y="28" width="414" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AkV-z0-zhj" id="LpX-sQ-OAD">
@@ -56,11 +56,6 @@
                                                 <action selector="saveBillButtonTapped:" destination="AkV-z0-zhj" eventType="touchUpInside" id="cEe-Rs-Vhp"/>
                                             </connections>
                                         </button>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pYG-CR-sXO">
-                                            <rect key="frame" x="0.0" y="0.0" width="409" height="88"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Ots-cZ-1jN" firstAttribute="top" secondItem="LpX-sQ-OAD" secondAttribute="top" constant="8" id="05T-aH-L6L"/>
@@ -159,38 +154,26 @@
                         <sections>
                             <tableViewSection id="sNq-ZI-ihF">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rTB-nY-Gvf">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="121"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="rTB-nY-Gvf">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rTB-nY-Gvf" id="EnV-DX-Ql3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJu-3m-faa">
-                                                    <rect key="frame" x="10" y="8" width="24" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bill Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONJ-tS-b35">
-                                                    <rect key="frame" x="49" y="8" width="355" height="19.5"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcG-kf-bA7">
+                                                    <rect key="frame" x="0.0" y="11" width="414" height="81"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ONJ-tS-b35" secondAttribute="trailing" constant="10" id="0wt-ZZ-hcb"/>
-                                                <constraint firstItem="ONJ-tS-b35" firstAttribute="top" secondItem="EnV-DX-Ql3" secondAttribute="top" constant="8" id="3Gn-TL-DVO"/>
-                                                <constraint firstItem="EJu-3m-faa" firstAttribute="leading" secondItem="EnV-DX-Ql3" secondAttribute="leading" constant="10" id="GNw-8u-g6i"/>
-                                                <constraint firstItem="EJu-3m-faa" firstAttribute="top" secondItem="EnV-DX-Ql3" secondAttribute="top" constant="8" id="ei0-PQ-uqH"/>
-                                                <constraint firstItem="ONJ-tS-b35" firstAttribute="leading" secondItem="EJu-3m-faa" secondAttribute="trailing" constant="15" id="wcx-D2-KLV"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZcG-kf-bA7" secondAttribute="trailing" id="JVh-zm-SSY"/>
+                                                <constraint firstItem="ZcG-kf-bA7" firstAttribute="leading" secondItem="EnV-DX-Ql3" secondAttribute="leading" id="e0g-Hq-Yv4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="37" id="Jjy-OT-HTM">
-                                        <rect key="frame" x="0.0" y="149" width="414" height="37"/>
+                                        <rect key="frame" x="0.0" y="128" width="414" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jjy-OT-HTM" id="qcs-Ph-vvp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
@@ -211,7 +194,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="146" id="chb-i1-VS4">
-                                        <rect key="frame" x="0.0" y="186" width="414" height="146"/>
+                                        <rect key="frame" x="0.0" y="165" width="414" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="chb-i1-VS4" id="55u-ha-Vev">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="146"/>
@@ -314,15 +297,13 @@
                     <connections>
                         <outlet property="latestActionDateLabel" destination="B7U-BO-uNn" id="7vD-l3-WHD"/>
                         <outlet property="latestActionLabel" destination="ROD-fp-PXs" id="Sil-86-QBF"/>
-                        <outlet property="nameContentView" destination="EnV-DX-Ql3" id="nHB-Sa-kYX"/>
-                        <outlet property="nameLabel" destination="ONJ-tS-b35" id="m5D-XU-kZ9"/>
                         <outlet property="noLabel" destination="8G0-nq-RXa" id="Hj8-XN-qUT"/>
-                        <outlet property="numberLabel" destination="EJu-3m-faa" id="s4I-K6-eHW"/>
                         <outlet property="rep1NameLabel" destination="dJN-fY-lSA" id="e23-pY-aZv"/>
                         <outlet property="rep1VoteLabel" destination="iq1-vM-GAd" id="xw6-td-k35"/>
                         <outlet property="rep2NameLabel" destination="aDh-95-lbj" id="h6J-3J-AJ0"/>
                         <outlet property="rep2VoteLabel" destination="OHW-gn-Q7N" id="M13-v3-Ta9"/>
                         <outlet property="summaryLabel" destination="jUS-Db-ztW" id="jRo-QP-IN2"/>
+                        <outlet property="viewForImages" destination="ZcG-kf-bA7" id="gJ4-Sm-wtO"/>
                         <outlet property="yesLabel" destination="4PG-Qk-dir" id="aES-N2-JUT"/>
                     </connections>
                 </tableViewController>
