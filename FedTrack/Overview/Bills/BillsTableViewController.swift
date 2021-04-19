@@ -93,4 +93,8 @@ class BillsTableViewController: UITableViewController, UIPopoverPresentationCont
             billInfoTableViewController.billInfo = selectedResult
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "BillsToSpecificBill", sender: nil)
+        }
 }

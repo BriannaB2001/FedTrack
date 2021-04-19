@@ -80,14 +80,4 @@ class OverviewTableViewController: UITableViewController, UIPopoverPresentationC
         
         return normalCellHeight
     }
-
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "BillsToSpecificBill" {
-//            let billInfoTableViewController = segue.destination as!
-//                BillInfoTableViewController
-//            let indexPath = tableView.indexPathForSelectedRow!
-//            let selectedResult = allBills.first!.bills[indexPath.row]
-//            billInfoTableViewController.billInfo = selectedResult
-//        }
-//    }
 }

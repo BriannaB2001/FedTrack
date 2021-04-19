@@ -10,11 +10,8 @@ import SwiftUI
 
 class BillInfoTableViewController: UITableViewController {
     
-    
     @IBOutlet weak var summaryLabel: UILabel!
-    
     @IBOutlet weak var viewForImages: UIView!
-    
     @IBOutlet weak var latestActionDateLabel: UILabel!
     @IBOutlet weak var latestActionLabel: UILabel!
     @IBOutlet weak var yesLabel: UILabel!
@@ -53,12 +50,12 @@ class BillInfoTableViewController: UITableViewController {
                                     if let stateFromDefaults = UserDefaults.standard.string(forKey: "state"),
                                        let abbState = self.statesDictionary[stateFromDefaults] {
                                         if position.state == abbState {
-                                            peopleWhoVoted.append(position.name)
+                                            peopleWhoVoted.append("\(position.name) \(position.votePosition)")
                                         }
                                     }
                                 }
-                                print(peopleWhoVoted)
-                                //self.specificVote = bills ?? []
+                                self.rep1NameLabel.text = peopleWhoVoted[0]
+                                self.rep2NameLabel.text = peopleWhoVoted[1]
                                 self.tableView.reloadData()
                             }
                         }
@@ -71,23 +68,18 @@ class BillInfoTableViewController: UITableViewController {
         
         if let billInfo = billInfo {
             
-            
-//
-//            let congressView = UIHostingController(rootView: ContentView(committee: billInfo.committee, house: (billInfo.house != nil), senate: (billInfo.senate != nil), enacted: (billInfo.enacted != nil), billName: billInfo.shortTitle, isFavorited: true, billSubject: billInfo.primarySubject ))
-//            congressView.view.frame = viewForImages.bounds
-//            viewForImages.addSubview(congressView.view)
-//            congressView.view.translatesAutoresizingMaskIntoConstraints = false
-//            congressView.view.leadingAnchor.constraint(equalTo: viewForImages.leadingAnchor).isActive = true
-//            congressView.view.trailingAnchor.constraint(equalTo: viewForImages.trailingAnchor).isActive = true
-//            congressView.view.topAnchor.constraint(equalTo: viewForImages.topAnchor).isActive = true
-//            congressView.view.bottomAnchor.constraint(equalTo: viewForImages.bottomAnchor).isActive = true
+            let congressView = UIHostingController(rootView: ContentView(committee: billInfo.committee, house: (billInfo.house != nil), senate: (billInfo.senate != nil), enacted: (billInfo.enacted != nil), billName: billInfo.shortTitle, isFavorited: true, billSubject: billInfo.primarySubject ))
+            congressView.view.frame = viewForImages.bounds
+            viewForImages.addSubview(congressView.view)
+            congressView.view.translatesAutoresizingMaskIntoConstraints = false
+            congressView.view.leadingAnchor.constraint(equalTo: viewForImages.leadingAnchor).isActive = true
+            congressView.view.trailingAnchor.constraint(equalTo: viewForImages.trailingAnchor).isActive = true
+            congressView.view.topAnchor.constraint(equalTo: viewForImages.topAnchor).isActive = true
+            congressView.view.bottomAnchor.constraint(equalTo: viewForImages.bottomAnchor).isActive = true
             
             
-            
-            
-            
-//            numberLabel?.text = "\(billInfo.number)"
-//            nameLabel?.text = "\(billInfo.shortTitle)"
+            //            numberLabel?.text = "\(billInfo.number)"
+            //            nameLabel?.text = "\(billInfo.shortTitle)"
             summaryLabel?.text = "\(billInfo.summary)"
             latestActionDateLabel?.text = "\(billInfo.latestActionDate)"
             latestActionLabel?.text = "\(billInfo.latestAction)"

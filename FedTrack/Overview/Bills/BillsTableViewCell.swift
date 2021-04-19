@@ -33,17 +33,4 @@ class BillsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
     }
-    @IBAction func saveBillButtonTapped(_ sender: Any) {
-        
-//        let currentCatFactText = allBills[catFactIndex].text
-//        if let existingEntry =  CoreDataManager.shared.entryForText(text: currentCatFactText ) {
-//            CoreDataManager.shared.deleteEntry(entry: existingEntry)
-//            favoritedButton.isSelected = false
-//        } else {
-//            CoreDataManager.shared.createNewEntry(text: allBills[catFactIndex].text, type: .catFact)
-//            favoritedButton.isSelected = true
-//        }
-        
-    }
-    
 }

@@ -69,7 +69,7 @@
         <scene sceneID="kBu-yF-xEt">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="Laws" storyboardName="Laws" referencedIdentifier="Laws" id="izl-wN-o5n" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="note.text" catalog="system" selectedImage="note.text" id="KQE-Xv-5aM"/>
+                    <tabBarItem key="tabBarItem" title="Laws" image="note.text" catalog="system" selectedImage="note.text" id="KQE-Xv-5aM"/>
                     <navigationItem key="navigationItem" id="REo-Al-jqd"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxO-b4-yZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
